@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22;
+package com.umontreal.ift3913.h22.Javadocchecker;
 
 public interface IMetrics {
 
