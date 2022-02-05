@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.concurrent.Flow.Subscriber;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -40,6 +39,25 @@ public class Helper {
             return "";
     }
 
+
+    /**
+     * Line is non empty
+     * @param line in analysis
+     * @return if line is valid
+     */
+    public static boolean isAValidLine(String line){
+        if (line.trim().isEmpty()) {
+         return false;
+        }
+        return true;
+    }
+
+    public static boolean isACommentary(String line){
+        String COMMENT_REGEX = readConfig("COMMENT_REGEX");
+        Pattern stringPattern = Pattern.compile(COMMENT_REGEX);
+        Matcher m = stringPattern.matcher(line);
+        return m.find();
+    }
     
     
 }
