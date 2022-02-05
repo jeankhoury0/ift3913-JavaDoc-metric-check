@@ -1,7 +1,5 @@
 package com.umontreal.ift3913.h22.Javadocchecker;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -25,7 +23,7 @@ public class Parser {
                 // CHECK PARENT OF EACH FILE extract package
                 // add to a hashmap 
                 if (isAValidFile(p)){
-                    readByLine(p);
+                    new ClassInfo(p);
                 }
                 return FileVisitResult.CONTINUE;
             }
@@ -38,17 +36,7 @@ public class Parser {
         }
     }
 
-    private static void readByLine(Path p){
-        try{
-            BufferedReader br = new BufferedReader(new FileReader(p.toString()));
-                for (String line; (line = br.readLine()) != null;) {
-                    System.out.println(line);
-                }
-        } catch(IOException e){
-            e.printStackTrace();
-        }
-        
-    }
+   
 
 
     private static Boolean isAValidFile(Path p){
@@ -64,5 +52,6 @@ public class Parser {
         }
         return false;
     }
+
 
 }
