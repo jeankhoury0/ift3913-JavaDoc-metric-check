@@ -9,3 +9,6 @@ Lab based on the course 'IFT3913 QUALITÉ DE LOGICIEL ET MÉTRIQUES'
 
 ## hypothese
 - The user entered a non point separated file (we wont parse test.app.java)
+
+## Bug
+- package-info.java are still showing as null class
