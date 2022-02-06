@@ -6,6 +6,5 @@ public class App
     {
         final String PATH_TO_REPOSITORY = Helper.readConfig("PATH_TO_REPOSITORY");
         Parser.getAllFilesFromPath(PATH_TO_REPOSITORY);
-
     }
 }

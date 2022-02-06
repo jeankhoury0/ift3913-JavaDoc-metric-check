@@ -1,20 +1,24 @@
 package com.umontreal.ift3913.h22.Javadocchecker;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.HashMap;
 import java.util.regex.PatternSyntaxException;
 
+import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.classCSVGenerator;
+import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.packageCSVGenerator;
 
 public class Parser {
     /**
      * Get all files from the path specified
+     * 
      * @param pathToRepo is the String to the repository we want to read file from
      */
-    public static void getAllFilesFromPath(String pathToRepo) {
+    private static HashMap<String, PackageInfo> packageMap = new HashMap<String, PackageInfo>();
+    final static classCSVGenerator classCSV = new classCSVGenerator();
 
+    public static void getAllFilesFromPath(String pathToRepo) {
         Path p = Paths.get(pathToRepo);
         FileVisitor<Path> fv = new SimpleFileVisitor<Path>() {
             @Override
@@ -23,39 +27,38 @@ public class Parser {
                 // todo EXECUTE CODE HERE
                 // System.out.println(p);
                 // CHECK PARENT OF EACH FILE extract package
-                // add to a hashmap 
-                if (isAValidFile(p)){
-                    readByLine(p);
-                }
+                // add to a hashmap
+                operationOnEachPath(p);
                 return FileVisitResult.CONTINUE;
             }
         };
 
         try {
             Files.walkFileTree(p, fv);
+            // * Parse CSV
+            packageCSVGenerator packageCSV = new packageCSVGenerator();
+            packageCSV.parseMapToCSV(packageMap);
+
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            classCSV.closePW();
         }
     }
 
-    private static void readByLine(Path p){
-        try{
-            BufferedReader br = new BufferedReader(new FileReader(p.toString()));
-                for (String line; (line = br.readLine()) != null;) {
-                    System.out.println(line);
-                }
-        } catch(IOException e){
-            e.printStackTrace();
+    private static void operationOnEachPath(Path p){
+        if (isAValidFile(p)) {
+            ClassInfo ci = new ClassInfo(p);
+            classCSV.appendLine(ci.toCSV());
+            appendToPackageMap(ci);
         }
-        
     }
 
-
-    private static Boolean isAValidFile(Path p){
+    private static Boolean isAValidFile(Path p) {
         try {
             String LANGUAGE_EXTENSION = Helper.readConfig("LANGUAGE_EXTENSION").toLowerCase();
             String actualFileExtension = p.toFile().toString().split("\\.")[1].toLowerCase();
-            if(LANGUAGE_EXTENSION.matches(actualFileExtension)){
+            if (LANGUAGE_EXTENSION.matches(actualFileExtension)) {
                 return true;
             }
         } catch (PatternSyntaxException e) {
@@ -63,6 +66,19 @@ public class Parser {
             return false;
         }
         return false;
+    }
+    
+    private static void appendToPackageMap(ClassInfo ci) {
+        PackageInfo pi = packageMap.get(ci.getPackageName());
+        if (pi == null) {
+            packageMap.put(ci.getPackageName(), new PackageInfo());
+            System.out.print("P");
+        } else {
+            System.out.print(".");
+        }
+
+        pi = packageMap.get(ci.getPackageName());
+        pi.add(ci);
     }
 
 }
