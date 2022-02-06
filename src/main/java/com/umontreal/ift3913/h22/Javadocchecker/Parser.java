@@ -6,8 +6,8 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.HashMap;
 import java.util.regex.PatternSyntaxException;
 
-import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.classCSVGenerator;
-import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.packageCSVGenerator;
+import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.ClassCSVGenerator;
+import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.PackageCSVGenerator;
 
 public class Parser {
     /**
@@ -16,7 +16,7 @@ public class Parser {
      * @param pathToRepo is the String to the repository we want to read file from
      */
     private static HashMap<String, PackageInfo> packageMap = new HashMap<String, PackageInfo>();
-    final static classCSVGenerator classCSV = new classCSVGenerator();
+    final static ClassCSVGenerator classCSV = new ClassCSVGenerator();
 
     public static void getAllFilesFromPath(String pathToRepo) {
         Path p = Paths.get(pathToRepo);
@@ -36,7 +36,7 @@ public class Parser {
         try {
             Files.walkFileTree(p, fv);
             // * Parse CSV
-            packageCSVGenerator packageCSV = new packageCSVGenerator();
+            PackageCSVGenerator packageCSV = new PackageCSVGenerator();
             packageCSV.parseMapToCSV(packageMap);
 
         } catch (IOException e) {
