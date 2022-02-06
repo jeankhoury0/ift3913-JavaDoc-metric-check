@@ -18,9 +18,6 @@ public class ClassInfo {
 
     public ClassInfo(Path PathToFile) {
         pathToFile = PathToFile;
-
-        // get total line of code
-        // get total line of comment
         readByLine(pathToFile);
     }
 
@@ -46,7 +43,7 @@ public class ClassInfo {
     }
 
     private void extractClassName(String line) {
-        String res = Helper.getIdentenfier(line, "public class");
+        String res = Helper.getIdentenfier(line, "public.* class|public.*interface|public.*enum");
         if (res != "") {
             this.classNameWasFound = true;
             this.className = res;
@@ -56,7 +53,23 @@ public class ClassInfo {
     private Boolean classNameWasFound = false;
 
     private boolean classNameNotFound() {
+        // TODO
         return this.classNameWasFound;
+    }
+
+
+
+    public Path getPathToFile() {
+        return pathToFile;
+    }
+
+    public String getPackageName() {
+        return packageName;
+    }
+
+
+    public String getClassName() {
+        return className;
     }
 
     private void extractPackageName(String line) {
@@ -66,6 +79,14 @@ public class ClassInfo {
             this.packageName = res;
         }
 
+    }
+
+    public int getClassLOC(){
+        return LOC;
+    }
+
+    public int getClassCLOC() {
+        return CLOC;
     }
 
     private Boolean packageNameWasFound = false;
@@ -93,19 +114,7 @@ public class ClassInfo {
 
     }
 
-    /**
-     * Check that we are calculating a class
-     * (not an ENUM or Inteface)
-     * 
-     * @return if the fields are valid
-     */
-    private boolean allTheFieldsAreValid() {
-        if (className == null) {
-            return false;
-        }
-        return true;
 
-    }
 
     @SuppressWarnings("showOutput")
     private void showOutput() {
@@ -120,14 +129,11 @@ public class ClassInfo {
     }
 
     public String toCSV() {
-        if (allTheFieldsAreValid()) {
             return (pathToFile + "," +
                     className + "," +
                     LOC + "," +
                     CLOC + "," +
                     DC+ "\n");
-        } else
-            return "";
     }
 
 }

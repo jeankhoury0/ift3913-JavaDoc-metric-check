@@ -1,16 +1,20 @@
 package com.umontreal.ift3913.h22.Javadocchecker.csvGenerator;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class classCSVGenerator extends csvFactory {
+/**
+ * classCSVGenerator
+ * Generate the CSV for the class
+ */
+public class classCSVGenerator {
+    private final String fileName = "classe.csv";
     private FileWriter pw;
     
     public classCSVGenerator(){
         try {
-            pw = new FileWriter(new File("Classe.csv"),true);
+            pw = new FileWriter(new File(fileName), true);
             writeHeader();
         } catch (IOException e) {
             e.printStackTrace();
@@ -36,7 +40,6 @@ public class classCSVGenerator extends csvFactory {
         try {
             pw.append(CSVline);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return;
