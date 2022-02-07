@@ -14,7 +14,7 @@ public class classCSVGenerator {
     
     public classCSVGenerator(){
         try {
-            pw = new FileWriter(new File(fileName), true);
+            pw = new FileWriter(new File(fileName), false);
             writeHeader();
         } catch (IOException e) {
             e.printStackTrace();
@@ -30,7 +30,7 @@ public class classCSVGenerator {
     }
     private void writeHeader(){
         try {
-            pw.append("chemin, class, classe_LOC, classe_CLOC, classe_DC \n");
+            pw.append("chemin, class, classe_LOC, classe_CLOC, classe_DC, WMC, classe_BC\n");
         } catch (IOException e) {
             e.printStackTrace();
         }

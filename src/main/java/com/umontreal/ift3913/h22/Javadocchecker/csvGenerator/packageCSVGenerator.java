@@ -18,7 +18,7 @@ public class packageCSVGenerator {
 
     public packageCSVGenerator() {
         try {
-            pw = new FileWriter(new File(fileName), true);
+            pw = new FileWriter(new File(fileName), false);
             writeHeader();
 
         } catch (IOException e) {

@@ -46,6 +46,7 @@ public class Parser {
         }
     }
 
+    // TODO methods operations
     private static void operationOnEachPath(Path p){
         if (isAValidFile(p)) {
             ClassInfo ci = new ClassInfo(p);
