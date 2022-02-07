@@ -56,7 +56,7 @@ public class packageCSVGenerator {
 
     private void writeHeader() {
         try {
-            pw.append("chemin, paquet, paquet_LOC, paquet_CLOC, paquet_DC \n");
+            pw.append("chemin, paquet, paquet_LOC, paquet_CLOC, paquet_DC, WCP, paquet_BC\n");
         } catch (IOException e) {
             e.printStackTrace();
         }

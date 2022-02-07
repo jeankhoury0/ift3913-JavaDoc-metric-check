@@ -45,8 +45,8 @@ public class ClassInfo {
             e.printStackTrace();
         }
         WMC += methodCount;
-        DC = (float) CLOC / (float) LOC;
-        BC = DC / (float) WMC;
+        DC = getDC();
+        BC = getBC();
         // showOutput();
 
     }
@@ -96,6 +96,26 @@ public class ClassInfo {
 
     public int getClassCLOC() {
         return CLOC;
+    }
+
+    public int getClassWMC() {
+        return WMC;
+    }
+
+    private float getDC() {
+        if (LOC == 0) {
+            return 0;
+        } else {
+            return (float) CLOC / (float) LOC;
+        }
+    }
+
+    private float getBC() {
+        if (WMC == 0) {
+            return 0;
+        } else {
+            return getDC() / (float) WMC;
+        }
     }
 
     private Boolean packageNameWasFound = false;

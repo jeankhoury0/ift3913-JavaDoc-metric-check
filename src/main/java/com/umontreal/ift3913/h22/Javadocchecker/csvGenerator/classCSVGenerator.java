@@ -9,7 +9,7 @@ import java.io.IOException;
  * Generate the CSV for the class
  */
 public class classCSVGenerator {
-    private final String fileName = "classe.csv";
+    private final String fileName = "classes.csv";
     private FileWriter pw;
     
     public classCSVGenerator(){
