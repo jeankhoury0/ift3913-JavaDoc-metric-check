@@ -8,7 +8,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Have all informations of the class
+ * Have all informations of the selected class
+ * Basic informations are:
+ * - pathToFile: The asbolute path to the class
+ * - packageName: The name packageName
+ * - className: The name of the class
+ * The metrics are:
+ * - LOC: Line of code in the class
+ * - CLOC: Line of comments in the class
+ * - WMC: Weighted Methods per Class
+ * - DC: Density of code in report to comment lines
+ * - BC: DC / WMC
  */
 public class ClassInfo {
     private Path pathToFile;
@@ -21,6 +31,11 @@ public class ClassInfo {
     private float BC = 0;
     private int methodCount = 0;
 
+    /**
+     * Constructor to each class
+     * 
+     * @param PathToFile is the absolute path the file
+     */
     public ClassInfo(Path PathToFile) {
         pathToFile = PathToFile;
         readByLine(pathToFile);
@@ -30,31 +45,27 @@ public class ClassInfo {
         try {
             BufferedReader br = new BufferedReader(new FileReader(p.toString()));
             for (String line; (line = br.readLine()) != null;) {
-                metricIncrease(line);
-                predicateIncrease(line);
-                methodIncrease(line);
-                if (classNameFound()) {
-                    extractClassName(line);
-                }
-
-                if (packageNameFound()) {
-                    extractPackageName(line);
-                }
+                actionForEachLine(line);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void actionForEachLine(String line) {
+        extractClassName(line);
+        extractPackageName(line);
+        metricIncrease(line);
+        predicateIncrease(line);
+        methodIncrease(line);
         WMC += methodCount;
         DC = getDC();
         BC = getBC();
-        // showOutput();
-
     }
 
     private void extractClassName(String line) {
         String res = Helper.getIdentenfier(line, "public.* class|public.*interface|public.*enum");
         if (res != "") {
-            this.classNameWasFound = true;
             this.className = res;
         }
     }
@@ -62,31 +73,9 @@ public class ClassInfo {
     private void extractPackageName(String line) {
         String res = Helper.getIdentenfier(line, "package");
         if (res != "") {
-            this.packageNameWasFound = true;
             this.packageName = res;
         }
-
     }
-
-    private boolean classNameWasFound = false;
-
-    private boolean classNameFound() {
-        // if (! this.classNameWasFound){
-        //     return false;
-        // }
-        return true;
-    }
-
-    private boolean packageNameWasFound = false;
-    
-    private boolean packageNameFound() {
-        // if (! this.packageNameWasFound) {
-        //     return false;
-        // }
-        return true;
-    }
-
-
 
     public Path getPathToFile() {
         return pathToFile;
@@ -96,14 +85,11 @@ public class ClassInfo {
         return packageName;
     }
 
-
     public String getClassName() {
         return className;
     }
 
-
-
-    public int getClassLOC(){
+    public int getClassLOC() {
         return LOC;
     }
 
@@ -131,7 +117,6 @@ public class ClassInfo {
         }
     }
 
-
     private void increaseLOC() {
         this.LOC += 1;
     }
@@ -154,7 +139,7 @@ public class ClassInfo {
                 String REGEX = "(?:^|\\W)(if|while|switch|for)(?:$|\\W)";
                 Pattern stringPattern = Pattern.compile(REGEX);
                 Matcher m = stringPattern.matcher(line);
-                increaseWMC((int)m.results().count());
+                increaseWMC((int) m.results().count());
             }
         }
     }
@@ -173,10 +158,9 @@ public class ClassInfo {
         String REGEX = "(\\w+)(\\s+)([a-z]\\w*)(\\s*)(\\()";
         Pattern stringPattern = Pattern.compile(REGEX);
         Matcher m = stringPattern.matcher(line);
-        increaseMethodCount((int)m.results().count());
+        increaseMethodCount((int) m.results().count());
     }
 
-    @SuppressWarnings("showOutput")
     private void showOutput() {
         System.out.println("===");
         System.out.println("Path: " + pathToFile);
@@ -189,12 +173,12 @@ public class ClassInfo {
     }
 
     public String toCSV() {
-            return (pathToFile + "," +
-                    className + "," +
-                    LOC + "," +
-                    CLOC + "," +
-                    DC + "," +
-                    WMC + "," +
-                    BC + "\n");
+        return (pathToFile + "," +
+                className + "," +
+                LOC + "," +
+                CLOC + "," +
+                DC + "," +
+                WMC + "," +
+                BC + "\n");
     }
 }

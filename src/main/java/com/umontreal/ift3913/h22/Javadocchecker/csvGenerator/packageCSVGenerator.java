@@ -36,8 +36,6 @@ public class PackageCSVGenerator {
         }
     }
 
-
-
     public void appendLine(String CSVline) {
         try {
             pw.append(CSVline);

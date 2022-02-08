@@ -5,14 +5,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * classCSVGenerator
+ * ClassCSVGenerator
  * Generate the CSV for the class
  */
 public class ClassCSVGenerator {
     private final String fileName = "classes.csv";
     private FileWriter pw;
-    
-    public ClassCSVGenerator(){
+
+    public ClassCSVGenerator() {
         try {
             File f = new File(fileName);
             f.delete();
@@ -23,14 +23,15 @@ public class ClassCSVGenerator {
         }
     }
 
-    public void closePW(){
+    public void closePW() {
         try {
             pw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private void writeHeader(){
+
+    private void writeHeader() {
         try {
             pw.append("chemin, class, classe_LOC, classe_CLOC, classe_DC, WMC, classe_BC\n");
         } catch (IOException e) {
@@ -38,7 +39,7 @@ public class ClassCSVGenerator {
         }
     }
 
-    public void appendLine(String CSVline){
+    public void appendLine(String CSVline) {
         try {
             pw.append(CSVline);
         } catch (IOException e) {

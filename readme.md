@@ -1,17 +1,41 @@
 # JavaDoc metric check
+## About
+Project to mesure the documentation embeded in java code. It aims to flag complicated code with an inapropriate level of comments. 
 
-Lab based on the course 'IFT3913 QUALITÉ DE LOGICIEL ET MÉTRIQUES'
+This project was made for the class IFT3913 - software quality and metrics in winter 2022. [Link to the assignement](https://github.com/jeankhoury0/ift3913-JavaDoc-metric-check/blob/main/TP1-Question.pdf) (in French)
 
 ## Contributor
-
 - @jeankhoury0
 - @tianpeng97
+# What we mesure:
+## Class related metrics
+- **classe_LOC**: The number of lines of code in a class
+- **classe_CLOC**: The number of lines of comments in a class
+- **classe_DC**: The densité of comments in a class (classe_CLOC/classe_LOC)
+- **WMC**: Weighted Methods per Class - mesure of cyclomatic complexity 
+- **classe_BC**: How well is the code commented (classe_DC/WMC)
 
-## hypothese
+## Package related metrics
+- **paquet_LOC**: The number of lines of code in a package
+- **paquet_CLOC**: The number of lines of comments in a package
+- **paquet_DC**: The densité of comments in a package (paquet_CLOC/paquet_LOC)
+- **WMC**: Weighted Methods per package - mesure of cyclomatic complexity 
+- **paquet_BC**: How well is the package commented (paquet_DC/WMC)
 
-- The user entered a non point separated file (we wont parse test.app.java)
+# How to use
+Run in the terminal
+``` 
+# if specifing the path in arguments
+$ java -jar codecheck.jar [path_to_repository]
+# if specifing the path in the config.properties
+$ java -jar codecheck.jar 
+
+```
+
+## Hypothesis
+- The java repository used is correctly formated and has passed through a first linting. 
+- package-info.java are not considered as valid file
 
 ## Bug
 
 - package-info.java are still showing as null class
-- BC can be infinity, division by 0
