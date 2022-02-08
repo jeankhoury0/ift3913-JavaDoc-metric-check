@@ -57,7 +57,5 @@ public class Helper {
         Pattern stringPattern = Pattern.compile(COMMENT_REGEX);
         Matcher m = stringPattern.matcher(line);
         return m.find();
-    }
-    
-    
+    }  
 }

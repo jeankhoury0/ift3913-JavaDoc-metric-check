@@ -9,7 +9,7 @@ import java.io.IOException;
  * Generate the CSV for the class
  */
 public class ClassCSVGenerator {
-    private final String fileName = "classe.csv";
+    private final String fileName = "classes.csv";
     private FileWriter pw;
     
     public ClassCSVGenerator(){
@@ -32,7 +32,7 @@ public class ClassCSVGenerator {
     }
     private void writeHeader(){
         try {
-            pw.append("chemin, class, classe_LOC, classe_CLOC, classe_DC \n");
+            pw.append("chemin, class, classe_LOC, classe_CLOC, classe_DC, WMC, classe_BC\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
