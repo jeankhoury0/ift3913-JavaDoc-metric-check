@@ -8,7 +8,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Have all informations of the class
+ * Have all informations of the selected class
+ * Basic informations are:
+ * - pathToFile: The asbolute path to the class
+ * - packageName: The name packageName
+ * - className: The name of the class
+ * The metrics are:
+ * - LOC: Line of code in the class
+ * - CLOC: Line of comments in the class
+ * - WMC: Weighted Methods per Class
+ * - DC: Density of code in report to comment lines
+ * - BC: DC / WMC
  */
 public class ClassInfo {
     private Path pathToFile;
@@ -21,6 +31,10 @@ public class ClassInfo {
     private float BC = 0;
     private int methodCount = 0;
 
+    /**
+     * Constructor to each class
+     * @param PathToFile is the absolute path the file
+     */
     public ClassInfo(Path PathToFile) {
         pathToFile = PathToFile;
         readByLine(pathToFile);
@@ -30,25 +44,27 @@ public class ClassInfo {
         try {
             BufferedReader br = new BufferedReader(new FileReader(p.toString()));
             for (String line; (line = br.readLine()) != null;) {
-                metricIncrease(line);
-                predicateIncrease(line);
-                methodIncrease(line);
-                if (classNameFound()) {
-                    extractClassName(line);
-                }
-
-                if (packageNameFound()) {
-                    extractPackageName(line);
-                }
+                actionForEachLine(line);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void actionForEachLine(String line){
+        if (classNameFound()) {
+            extractClassName(line);
+        }
+
+        if (packageNameFound()) {
+            extractPackageName(line);
+        }
+        metricIncrease(line);
+        predicateIncrease(line);
+        methodIncrease(line);
         WMC += methodCount;
         DC = getDC();
         BC = getBC();
-        // showOutput();
-
     }
 
     private void extractClassName(String line) {

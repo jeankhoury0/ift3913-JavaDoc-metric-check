@@ -58,4 +58,9 @@ public class Helper {
         Matcher m = stringPattern.matcher(line);
         return m.find();
     }  
+
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+
 }
