@@ -18,7 +18,7 @@ public class packageCSVGenerator {
 
     public packageCSVGenerator() {
         try {
-            pw = new FileWriter(new File(fileName), true);
+            pw = new FileWriter(new File(fileName), false);
             writeHeader();
 
         } catch (IOException e) {
@@ -56,7 +56,7 @@ public class packageCSVGenerator {
 
     private void writeHeader() {
         try {
-            pw.append("chemin, paquet, paquet_LOC, paquet_CLOC, paquet_DC \n");
+            pw.append("chemin, paquet, paquet_LOC, paquet_CLOC, paquet_DC, WCP, paquet_BC\n");
         } catch (IOException e) {
             e.printStackTrace();
         }

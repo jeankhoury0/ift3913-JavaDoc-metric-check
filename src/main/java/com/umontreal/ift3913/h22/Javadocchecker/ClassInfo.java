@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Have all informations of the class
@@ -14,7 +16,10 @@ public class ClassInfo {
     private String className;
     private int LOC = 0;
     private int CLOC = 0;
+    private int WMC = 0;
     private float DC = 0;
+    private float BC = 0;
+    private int methodCount = 0;
 
     public ClassInfo(Path PathToFile) {
         pathToFile = PathToFile;
@@ -26,6 +31,8 @@ public class ClassInfo {
             BufferedReader br = new BufferedReader(new FileReader(p.toString()));
             for (String line; (line = br.readLine()) != null;) {
                 metricIncrease(line);
+                predicateIncrease(line);
+                methodIncrease(line);
                 if (!classNameNotFound()) {
                     extractClassName(line);
                 }
@@ -37,7 +44,9 @@ public class ClassInfo {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        DC = (float) CLOC / (float) LOC;
+        WMC += methodCount;
+        DC = getDC();
+        BC = getBC();
         // showOutput();
 
     }
@@ -89,6 +98,26 @@ public class ClassInfo {
         return CLOC;
     }
 
+    public int getClassWMC() {
+        return WMC;
+    }
+
+    private float getDC() {
+        if (LOC == 0) {
+            return 0;
+        } else {
+            return (float) CLOC / (float) LOC;
+        }
+    }
+
+    private float getBC() {
+        if (WMC == 0) {
+            return 0;
+        } else {
+            return getDC() / (float) WMC;
+        }
+    }
+
     private Boolean packageNameWasFound = false;
 
     private boolean packageNameNotFound() {
@@ -103,8 +132,26 @@ public class ClassInfo {
         this.CLOC += 1;
     }
 
+    private void increaseMethodCount(int number) {
+        this.methodCount += number;
+    }
+
+    private void increaseWMC(int number) {
+        this.WMC += number;
+    }
+
+    private void predicateIncrease(String line) {
+        if (Helper.isAValidLine(line)) {
+            if (!Helper.isACommentary(line)) {
+                String REGEX = "(?:^|\\W)(if|while|switch|for)(?:$|\\W)";
+                Pattern stringPattern = Pattern.compile(REGEX);
+                Matcher m = stringPattern.matcher(line);
+                increaseWMC((int)m.results().count());
+            }
+        }
+    }
+
     private void metricIncrease(String line) {
-        Helper.isACommentary(line);
         if (Helper.isAValidLine(line)) {
             if (Helper.isACommentary(line)) {
                 increaseCLOC();
@@ -114,7 +161,12 @@ public class ClassInfo {
 
     }
 
-
+    private void methodIncrease(String line) {
+        String REGEX = "(\\w+)(\\s+)([a-z]\\w*)(\\s*)(\\()";
+        Pattern stringPattern = Pattern.compile(REGEX);
+        Matcher m = stringPattern.matcher(line);
+        increaseMethodCount((int)m.results().count());
+    }
 
     @SuppressWarnings("showOutput")
     private void showOutput() {
@@ -133,7 +185,8 @@ public class ClassInfo {
                     className + "," +
                     LOC + "," +
                     CLOC + "," +
-                    DC+ "\n");
+                    DC + "," +
+                    WMC + "," +
+                    BC + "\n");
     }
-
 }

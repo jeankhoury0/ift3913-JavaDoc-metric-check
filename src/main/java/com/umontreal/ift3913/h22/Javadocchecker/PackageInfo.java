@@ -8,6 +8,7 @@ public class PackageInfo {
     private ArrayList<ClassInfo> classes = new ArrayList<ClassInfo>();
     private int LOC;
     private int CLOC;
+    private int WCP;
     
 
     public void add(ClassInfo ci) {
@@ -18,18 +19,35 @@ public class PackageInfo {
         classes.add(ci);
         LOC += ci.getClassLOC();
         CLOC += ci.getClassCLOC();
+        WCP += ci.getClassWMC();
     }
 
     public float getDC(){
-        return (float) CLOC / (float) LOC;
+        if (LOC == 0) {
+            return 0;
+        } else {
+            return (float) CLOC / (float) LOC;
+        }
+    }
+
+    public float getBC() {
+        if (WCP == 0) {
+            return 0;
+        } else {
+            return getDC() / (float) WCP;
+        }
     }
 
     public String toCSV() {
+        float DC = getDC();
+        float BC = getBC();
         return (path + "," +
                 packageName + "," +
                 LOC + "," +
                 CLOC + "," +
-                getDC() + "\n");
+                DC + "," +
+                WCP + "," +
+                BC + "\n");
     }
 
     public String getPackageName() {

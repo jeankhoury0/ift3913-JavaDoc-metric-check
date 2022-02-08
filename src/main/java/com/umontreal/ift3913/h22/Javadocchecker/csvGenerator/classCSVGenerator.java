@@ -9,12 +9,12 @@ import java.io.IOException;
  * Generate the CSV for the class
  */
 public class classCSVGenerator {
-    private final String fileName = "classe.csv";
+    private final String fileName = "classes.csv";
     private FileWriter pw;
     
     public classCSVGenerator(){
         try {
-            pw = new FileWriter(new File(fileName), true);
+            pw = new FileWriter(new File(fileName), false);
             writeHeader();
         } catch (IOException e) {
             e.printStackTrace();
@@ -30,7 +30,7 @@ public class classCSVGenerator {
     }
     private void writeHeader(){
         try {
-            pw.append("chemin, class, classe_LOC, classe_CLOC, classe_DC \n");
+            pw.append("chemin, class, classe_LOC, classe_CLOC, classe_DC, WMC, classe_BC\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
