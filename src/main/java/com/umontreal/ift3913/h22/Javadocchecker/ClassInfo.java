@@ -33,6 +33,7 @@ public class ClassInfo {
 
     /**
      * Constructor to each class
+     * 
      * @param PathToFile is the absolute path the file
      */
     public ClassInfo(Path PathToFile) {
@@ -51,7 +52,7 @@ public class ClassInfo {
         }
     }
 
-    private void actionForEachLine(String line){
+    private void actionForEachLine(String line) {
         extractClassName(line);
         extractPackageName(line);
         metricIncrease(line);
@@ -76,7 +77,6 @@ public class ClassInfo {
         }
     }
 
-
     public Path getPathToFile() {
         return pathToFile;
     }
@@ -85,14 +85,11 @@ public class ClassInfo {
         return packageName;
     }
 
-
     public String getClassName() {
         return className;
     }
 
-
-
-    public int getClassLOC(){
+    public int getClassLOC() {
         return LOC;
     }
 
@@ -120,7 +117,6 @@ public class ClassInfo {
         }
     }
 
-
     private void increaseLOC() {
         this.LOC += 1;
     }
@@ -143,7 +139,7 @@ public class ClassInfo {
                 String REGEX = "(?:^|\\W)(if|while|switch|for)(?:$|\\W)";
                 Pattern stringPattern = Pattern.compile(REGEX);
                 Matcher m = stringPattern.matcher(line);
-                increaseWMC((int)m.results().count());
+                increaseWMC((int) m.results().count());
             }
         }
     }
@@ -162,7 +158,7 @@ public class ClassInfo {
         String REGEX = "(\\w+)(\\s+)([a-z]\\w*)(\\s*)(\\()";
         Pattern stringPattern = Pattern.compile(REGEX);
         Matcher m = stringPattern.matcher(line);
-        increaseMethodCount((int)m.results().count());
+        increaseMethodCount((int) m.results().count());
     }
 
     private void showOutput() {
@@ -177,12 +173,12 @@ public class ClassInfo {
     }
 
     public String toCSV() {
-            return (pathToFile + "," +
-                    className + "," +
-                    LOC + "," +
-                    CLOC + "," +
-                    DC + "," +
-                    WMC + "," +
-                    BC + "\n");
+        return (pathToFile + "," +
+                className + "," +
+                LOC + "," +
+                CLOC + "," +
+                DC + "," +
+                WMC + "," +
+                BC + "\n");
     }
 }
