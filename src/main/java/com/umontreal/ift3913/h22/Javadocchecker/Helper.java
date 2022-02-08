@@ -9,6 +9,11 @@ import java.util.regex.Pattern;
 
 public class Helper {
 
+    /**
+     * Read from the ./config.properties
+     * @param property is the property that we want to read (eg: PATH_TO_REPOSITORY)
+     * @return the value of the property
+     */
     public static String readConfig(String property){
         try( InputStream input = new FileInputStream("./config.properties")){
             Properties prop = new Properties();
@@ -42,7 +47,8 @@ public class Helper {
 
     /**
      * Line is non empty
-     * @param line in analysis
+     * 
+     * @param line is the line that might be invalid
      * @return if line is valid
      */
     public static boolean isAValidLine(String line){
@@ -52,6 +58,11 @@ public class Helper {
         return true;
     }
 
+    /**
+     * Check if the line passed is a commentary
+     * @param lineis the line that might contain a commentary
+     * @return true if the line is a commentary
+     */
     public static boolean isACommentary(String line){
         String COMMENT_REGEX = readConfig("COMMENT_REGEX");
         Pattern stringPattern = Pattern.compile(COMMENT_REGEX);
@@ -60,6 +71,7 @@ public class Helper {
     }  
 
 
+    // for the console output
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_YELLOW = "\u001B[33m";
 

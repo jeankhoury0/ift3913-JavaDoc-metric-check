@@ -52,13 +52,8 @@ public class ClassInfo {
     }
 
     private void actionForEachLine(String line){
-        if (classNameFound()) {
-            extractClassName(line);
-        }
-
-        if (packageNameFound()) {
-            extractPackageName(line);
-        }
+        extractClassName(line);
+        extractPackageName(line);
         metricIncrease(line);
         predicateIncrease(line);
         methodIncrease(line);
@@ -70,7 +65,6 @@ public class ClassInfo {
     private void extractClassName(String line) {
         String res = Helper.getIdentenfier(line, "public.* class|public.*interface|public.*enum");
         if (res != "") {
-            this.classNameWasFound = true;
             this.className = res;
         }
     }
@@ -78,30 +72,9 @@ public class ClassInfo {
     private void extractPackageName(String line) {
         String res = Helper.getIdentenfier(line, "package");
         if (res != "") {
-            this.packageNameWasFound = true;
             this.packageName = res;
         }
-
     }
-
-    private boolean classNameWasFound = false;
-
-    private boolean classNameFound() {
-        // if (! this.classNameWasFound){
-        //     return false;
-        // }
-        return true;
-    }
-
-    private boolean packageNameWasFound = false;
-    
-    private boolean packageNameFound() {
-        // if (! this.packageNameWasFound) {
-        //     return false;
-        // }
-        return true;
-    }
-
 
 
     public Path getPathToFile() {
@@ -192,7 +165,6 @@ public class ClassInfo {
         increaseMethodCount((int)m.results().count());
     }
 
-    @SuppressWarnings("showOutput")
     private void showOutput() {
         System.out.println("===");
         System.out.println("Path: " + pathToFile);
