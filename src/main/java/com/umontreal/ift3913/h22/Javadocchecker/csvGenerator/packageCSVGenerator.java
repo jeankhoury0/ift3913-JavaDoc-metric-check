@@ -9,16 +9,18 @@ import java.util.Map;
 import com.umontreal.ift3913.h22.Javadocchecker.PackageInfo;
 
 /**
- * packageCSVGenerator
+ * PackageCSVGenerator
  * Generate the CSV for the package
  */
-public class packageCSVGenerator {
+public class PackageCSVGenerator {
     private final String fileName = "paquets.csv";
     private FileWriter pw;
 
-    public packageCSVGenerator() {
+    public PackageCSVGenerator() {
         try {
-            pw = new FileWriter(new File(fileName), false);
+            File f = new File(fileName);
+            f.delete();
+            pw = new FileWriter(f, true);
             writeHeader();
 
         } catch (IOException e) {

@@ -33,11 +33,11 @@ public class ClassInfo {
                 metricIncrease(line);
                 predicateIncrease(line);
                 methodIncrease(line);
-                if (!classNameNotFound()) {
+                if (classNameFound()) {
                     extractClassName(line);
                 }
 
-                if (!packageNameNotFound()) {
+                if (packageNameFound()) {
                     extractPackageName(line);
                 }
             }
@@ -59,11 +59,31 @@ public class ClassInfo {
         }
     }
 
-    private Boolean classNameWasFound = false;
+    private void extractPackageName(String line) {
+        String res = Helper.getIdentenfier(line, "package");
+        if (res != "") {
+            this.packageNameWasFound = true;
+            this.packageName = res;
+        }
 
-    private boolean classNameNotFound() {
-        // TODO
-        return this.classNameWasFound;
+    }
+
+    private boolean classNameWasFound = false;
+
+    private boolean classNameFound() {
+        // if (! this.classNameWasFound){
+        //     return false;
+        // }
+        return true;
+    }
+
+    private boolean packageNameWasFound = false;
+    
+    private boolean packageNameFound() {
+        // if (! this.packageNameWasFound) {
+        //     return false;
+        // }
+        return true;
     }
 
 
@@ -81,14 +101,7 @@ public class ClassInfo {
         return className;
     }
 
-    private void extractPackageName(String line) {
-        String res = Helper.getIdentenfier(line, "package");
-        if (res != "") {
-            this.packageNameWasFound = true;
-            this.packageName = res;
-        }
 
-    }
 
     public int getClassLOC(){
         return LOC;
@@ -118,11 +131,6 @@ public class ClassInfo {
         }
     }
 
-    private Boolean packageNameWasFound = false;
-
-    private boolean packageNameNotFound() {
-        return this.packageNameWasFound;
-    }
 
     private void increaseLOC() {
         this.LOC += 1;
