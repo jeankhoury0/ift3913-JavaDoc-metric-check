@@ -67,15 +67,29 @@ public class Parser {
 
     protected static Boolean isAValidFile(Path p) {
         try {
+            
             String LANGUAGE_EXTENSION = Helper.readConfig("LANGUAGE_EXTENSION").toLowerCase();
             String actualFileExtension = p.toFile().toString().split("\\.")[1].toLowerCase();
-            if (LANGUAGE_EXTENSION.matches(actualFileExtension)) {
+            if ((LANGUAGE_EXTENSION.matches(actualFileExtension)) && (!isAnInformationalClass(p))) {
                 return true;
             }
         } catch (Exception e) {
             // catch a file that has no file extension
             return false;
         }
+        return false;
+    }
+    
+    /**
+     * Check if the file match package-info or module-info. Those files are excluded
+     * as they are not real classes.
+     * 
+     * @param p is the path to the class
+     * @return if a class is informational
+     */
+    private static Boolean isAnInformationalClass(Path p){
+        String fileName = p.getFileName().toString();
+        if ((fileName.matches("package-info.java")) || fileName.matches("module-info.java")) return true;
         return false;
     }
 

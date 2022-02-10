@@ -1,5 +1,4 @@
 chemin, class, classe_LOC, classe_CLOC, classe_DC, WMC, classe_BC
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\module-info.java,null,43,3,0.069767445,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\AbstractAnnotation.java,AbstractAnnotation,198,130,0.65656567,719,9.1316504E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\AbstractXYAnnotation.java,AbstractXYAnnotation,186,111,0.5967742,947,6.301734E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\Annotation.java,Annotation,57,50,0.877193,13,0.067476384
@@ -7,7 +6,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\CategoryLineAnnotation.java,CategoryLineAnnotation,390,198,0.50769234,7821,6.491399E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\CategoryPointerAnnotation.java,CategoryPointerAnnotation,480,263,0.54791665,17706,3.094525E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\CategoryTextAnnotation.java,CategoryTextAnnotation,246,126,0.5121951,2244,2.2825094E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\TextAnnotation.java,TextAnnotation,314,183,0.58280253,4406,1.3227474E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\XYAnnotation.java,XYAnnotation,64,53,0.828125,27,0.030671297
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\annotations\XYAnnotationBoundsInfo.java,XYAnnotationBoundsInfo,64,57,0.890625,33,0.026988637
@@ -24,7 +22,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\api\HorizontalAlignment.java,HorizontalAlignment,48,42,0.875,15,0.058333334
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\api\Layer.java,Layer,37,32,0.8648649,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\api\LengthAdjustmentType.java,LengthAdjustmentType,47,41,0.87234044,0,0.0
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\api\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\api\PublicCloneable.java,PublicCloneable,53,48,0.9056604,23,0.03937654
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\api\RectangleAlignment.java,RectangleAlignment,128,48,0.375,204,0.0018382353
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\api\RectangleAnchor.java,RectangleAnchor,152,57,0.375,433,8.6605083E-4
@@ -66,7 +63,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\axis\NumberTick.java,NumberTick,84,65,0.77380955,104,0.0074404767
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\axis\NumberTickUnit.java,NumberTickUnit,139,85,0.6115108,333,0.0018363688
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\axis\NumberTickUnitSource.java,NumberTickUnitSource,214,58,0.27102804,1302,2.0816286E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\axis\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\axis\PeriodAxis.java,PeriodAxis,1098,435,0.39617488,58642,6.7558212E-6
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\axis\PeriodAxisLabelInfo.java,PeriodAxisLabelInfo,320,164,0.5125,3220,1.5916149E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\axis\QuarterDateFormat.java,QuarterDateFormat,177,96,0.5423729,607,8.9353026E-4
@@ -101,7 +97,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\block\LabelBlock.java,LabelBlock,383,204,0.53263706,8553,6.2274885E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\block\LengthConstraintType.java,LengthConstraintType,52,46,0.88461536,21,0.04212454
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\block\LineBorder.java,LineBorder,214,96,0.44859812,1523,2.9454898E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\block\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\block\RectangleConstraint.java,RectangleConstraint,320,171,0.534375,2901,1.8420373E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\block\Size2D.java,Size2D,149,92,0.61744964,623,9.910909E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\ChartColor.java,ChartColor,149,79,0.5302013,0,0.0
@@ -114,7 +109,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\ChartTransferable.java,ChartTransferable,231,130,0.56277055,1557,3.6144545E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\ChartUtils.java,ChartUtils,630,397,0.6301587,30190,2.0873094E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\date\MonthConstants.java,MonthConstants,65,50,0.7692308,42,0.01831502
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\date\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\date\SerialDate.java,SerialDate,856,503,0.5876168,26288,2.2353042E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\date\SpreadsheetDate.java,SpreadsheetDate,405,231,0.5703704,8121,7.023401E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\Drawable.java,Drawable,43,37,0.8604651,4,0.21511628
@@ -122,7 +116,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\encoders\ImageEncoder.java,ImageEncoder,95,82,0.86315787,266,0.0032449544
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\encoders\ImageEncoderFactory.java,ImageEncoderFactory,143,91,0.6363636,624,0.0010198135
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\encoders\ImageFormat.java,ImageFormat,52,46,0.88461536,43,0.02057245
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\encoders\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\encoders\SunJPEGEncoderAdapter.java,SunJPEGEncoderAdapter,156,97,0.6217949,635,9.792045E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\encoders\SunPNGEncoderAdapter.java,SunPNGEncoderAdapter,117,81,0.6923077,453,0.0015282731
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\entity\AxisEntity.java,AxisEntity,191,112,0.58638746,1717,3.415186E-4
@@ -134,7 +127,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\entity\JFreeChartEntity.java,JFreeChartEntity,190,111,0.5842105,1717,3.4025073E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\entity\LegendItemEntity.java,LegendItemEntity,154,98,0.6363636,568,0.0011203585
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\entity\NodeEntity.java,NodeEntity,88,65,0.7386364,151,0.0048916317
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\entity\package-info.java,null,4,3,0.75,3,0.25
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\entity\PieSectionEntity.java,PieSectionEntity,211,130,0.6161137,1110,5.550574E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\entity\PlotEntity.java,PlotEntity,190,111,0.5842105,1717,3.4025073E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\entity\StandardEntityCollection.java,StandardEntityCollection,190,105,0.55263156,1192,4.636171E-4
@@ -154,7 +146,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\event\ChartProgressListener.java,ChartProgressListener,49,44,0.8979592,3,0.2993197
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\event\MarkerChangeEvent.java,MarkerChangeEvent,63,52,0.82539684,30,0.027513228
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\event\MarkerChangeListener.java,MarkerChangeListener,50,44,0.88,3,0.29333332
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\event\package-info.java,null,6,5,0.8333333,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\event\PlotChangeEvent.java,PlotChangeEvent,64,52,0.8125,32,0.025390625
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\event\PlotChangeListener.java,PlotChangeListener,50,45,0.9,3,0.29999998
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\event\RendererChangeEvent.java,RendererChangeEvent,87,68,0.7816092,67,0.011665809
@@ -164,7 +155,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\imagemap\DynamicDriveToolTipTagFragmentGenerator.java,DynamicDriveToolTipTagFragmentGenerator,86,66,0.76744187,30,0.025581395
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\imagemap\ImageMapUtils.java,ImageMapUtils,239,116,0.48535565,3725,1.3029682E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\imagemap\OverLIBToolTipTagFragmentGenerator.java,OverLIBToolTipTagFragmentGenerator,69,56,0.8115942,27,0.030059043
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\imagemap\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\imagemap\StandardToolTipTagFragmentGenerator.java,StandardToolTipTagFragmentGenerator,65,53,0.8153846,15,0.054358974
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\imagemap\StandardURLTagFragmentGenerator.java,StandardURLTagFragmentGenerator,66,55,0.8333333,17,0.049019605
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\imagemap\ToolTipTagFragmentGenerator.java,ToolTipTagFragmentGenerator,61,57,0.93442625,50,0.018688524
@@ -174,7 +164,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\internal\CloneUtils.java,CloneUtils,174,85,0.48850575,760,6.427707E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\internal\HashUtils.java,HashUtils,192,140,0.7291667,1297,5.6219485E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\internal\LineUtils.java,LineUtils,151,80,0.5298013,882,6.0068176E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\internal\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\internal\PaintUtils.java,PaintUtils,201,84,0.41791046,712,5.869529E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\internal\SerialUtils.java,SerialUtils,634,221,0.34858045,18938,1.8406403E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\internal\ShapeUtils.java,ShapeUtils,489,235,0.4805726,13305,3.61197E-5
@@ -199,7 +188,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\labels\ItemLabelAnchor.java,ItemLabelAnchor,92,64,0.6956522,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\labels\ItemLabelPosition.java,ItemLabelPosition,170,98,0.5764706,1426,4.042571E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\labels\MultipleXYSeriesLabelGenerator.java,MultipleXYSeriesLabelGenerator,212,100,0.4716981,1015,4.647272E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\labels\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\labels\PieSectionLabelGenerator.java,PieSectionLabelGenerator,85,74,0.87058824,182,0.004783452
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\labels\PieToolTipGenerator.java,PieToolTipGenerator,54,49,0.9074074,23,0.039452497
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\labels\StandardCategoryItemLabelGenerator.java,StandardCategoryItemLabelGenerator,133,86,0.6466165,674,9.593717E-4
@@ -225,9 +213,7 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\legend\LegendItemSource.java,LegendItemSource,50,45,0.9,28,0.032142855
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\legend\LegendRenderingOrder.java,LegendRenderingOrder,45,40,0.8888889,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\legend\LegendTitle.java,LegendTitle,617,270,0.4376013,20892,2.094588E-5
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\legend\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\legend\PaintScaleLegend.java,PaintScaleLegend,662,275,0.41540787,25206,1.6480515E-5
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\CategoryCrosshairState.java,CategoryCrosshairState,157,95,0.60509557,529,0.0011438479
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\CategoryMarker.java,CategoryMarker,174,107,0.61494255,942,6.5280526E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\CategoryPlot.java,CategoryPlot,4523,2162,0.47800133,1114194,4.2901087E-7
@@ -242,7 +228,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\compass\LongNeedle.java,LongNeedle,161,77,0.47826087,220,0.0021739132
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\compass\MeterNeedle.java,MeterNeedle,376,200,0.5319149,5282,1.0070331E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\compass\MiddlePinNeedle.java,MiddlePinNeedle,132,72,0.54545456,157,0.003474233
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\compass\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\compass\PinNeedle.java,PinNeedle,130,72,0.5538462,197,0.0028114018
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\compass\PlumNeedle.java,PlumNeedle,120,71,0.59166664,185,0.003198198
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\compass\PointerNeedle.java,PointerNeedle,140,70,0.5,209,0.0023923444
@@ -265,7 +250,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\dial\DialScale.java,DialScale,63,58,0.9206349,60,0.015343916
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\dial\DialTextAnnotation.java,DialTextAnnotation,361,208,0.5761773,6153,9.364168E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\dial\DialValueIndicator.java,DialValueIndicator,690,367,0.5318841,24466,2.1739723E-5
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\dial\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\dial\StandardDialFrame.java,StandardDialFrame,322,177,0.5496894,4335,1.2680264E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\dial\StandardDialRange.java,StandardDialRange,391,215,0.5498721,5504,9.9904086E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\dial\StandardDialScale.java,StandardDialScale,918,509,0.55446625,38778,1.42984745E-5
@@ -273,16 +257,13 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\DrawingSupplier.java,DrawingSupplier,88,76,0.8636364,282,0.0030625404
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\FastScatterPlot.java,FastScatterPlot,974,469,0.48151952,50406,9.552821E-6
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\flow\FlowPlot.java,FlowPlot,755,322,0.42649007,33157,1.2862746E-5
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\flow\package-info.java,null,4,3,0.75,3,0.25
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\IntervalMarker.java,IntervalMarker,197,115,0.5837563,1199,4.8686934E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\Marker.java,Marker,603,338,0.56053066,24023,2.3333083E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\MeterInterval.java,MeterInterval,198,109,0.55050504,2254,2.4423472E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\MeterPlot.java,MeterPlot,1163,531,0.4565778,70859,6.4434694E-6
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\Pannable.java,Pannable,80,69,0.8625,173,0.004985549
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\pie\AbstractPieLabelDistributor.java,AbstractPieLabelDistributor,96,72,0.75,142,0.00528169
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\pie\MultiplePiePlot.java,MultiplePiePlot,574,223,0.38850173,15191,2.5574467E-5
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\pie\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\pie\PieLabelDistributor.java,PieLabelDistributor,198,93,0.46969697,1121,4.1899818E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\pie\PieLabelLinkStyle.java,PieLabelLinkStyle,48,42,0.875,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\pie\PieLabelRecord.java,PieLabelRecord,253,139,0.5494071,2662,2.0638885E-4
@@ -323,7 +304,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\category\LevelRenderer.java,LevelRenderer,403,190,0.471464,3360,1.4031667E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\category\LineAndShapeRenderer.java,LineAndShapeRenderer,774,396,0.5116279,30167,1.6959853E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\category\MinMaxCategoryRenderer.java,MinMaxCategoryRenderer,493,226,0.45841786,8595,5.333541E-5
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\category\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\category\ScatterRenderer.java,ScatterRenderer,534,265,0.49625468,11023,4.501993E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\category\StackedAreaRenderer.java,StackedAreaRenderer,438,156,0.3561644,5474,6.506474E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\category\StackedBarRenderer.java,StackedBarRenderer,346,133,0.38439307,3399,1.1309005E-4
@@ -338,7 +318,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\Outlier.java,Outlier,196,130,0.6632653,1430,4.6382187E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\OutlierList.java,OutlierList,156,107,0.6858974,413,0.0016607685
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\OutlierListCollection.java,OutlierListCollection,157,108,0.6878981,353,0.0019487198
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\PaintScale.java,PaintScale,73,65,0.89041096,69,0.012904507
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\PolarItemRenderer.java,PolarItemRenderer,182,147,0.8076923,1496,5.3990126E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\RendererState.java,RendererState,103,72,0.69902915,124,0.005637332
@@ -353,7 +332,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\xy\DeviationStepRenderer.java,DeviationStepRenderer,282,110,0.39007092,2025,1.9262762E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\xy\GradientXYBarPainter.java,GradientXYBarPainter,339,131,0.38643068,1719,2.247997E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\xy\HighLowRenderer.java,HighLowRenderer,448,206,0.45982143,8274,5.557426E-5
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\xy\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\xy\SamplingXYLineRenderer.java,SamplingXYLineRenderer,333,163,0.4894895,2253,2.172612E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\xy\StackedXYAreaRenderer.java,StackedXYAreaRenderer,609,274,0.4499179,13392,3.359602E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\xy\StackedXYAreaRenderer2.java,StackedXYAreaRenderer2,493,170,0.3448276,5688,6.0623697E-5
@@ -404,7 +382,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\editor\FontChooserPanel.java,FontChooserPanel,182,69,0.3791209,306,0.0012389572
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\editor\FontDisplayField.java,FontDisplayField,86,57,0.6627907,67,0.0098923985
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\editor\LCBLayout.java,LCBLayout,236,96,0.40677965,521,7.8076706E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\editor\package-info.java,null,4,3,0.75,3,0.25
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\editor\PaintSample.java,PaintSample,100,57,0.57,137,0.004160584
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\editor\StrokeChooserPanel.java,StrokeChooserPanel,83,53,0.6385542,30,0.02128514
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\editor\StrokeSample.java,StrokeSample,146,74,0.5068493,721,7.0298096E-4
@@ -413,7 +390,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\Overlay.java,Overlay,78,71,0.9102564,164,0.005550344
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\OverlayChangeEvent.java,OverlayChangeEvent,50,44,0.88,7,0.12571429
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\OverlayChangeListener.java,OverlayChangeListener,48,43,0.8958333,3,0.2986111
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\PolarChartPanel.java,PolarChartPanel,215,99,0.4604651,444,0.0010370836
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\SelectionZoomStrategy.java,SelectionZoomStrategy,160,136,0.85,1738,4.890679E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\swing\UIUtils.java,UIUtils,181,100,0.5524862,1127,4.902273E-4
@@ -421,10 +397,8 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\format\HexNumberFormat.java,HexNumberFormat,136,91,0.6691176,536,0.0012483537
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\format\HMSNumberFormat.java,HMSNumberFormat,105,76,0.72380954,351,0.0020621354
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\format\LogFormat.java,LogFormat,222,125,0.5630631,1729,3.2565824E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\format\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\format\RelativeDateFormat.java,RelativeDateFormat,501,285,0.56886226,10051,5.659758E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\G2TextMeasurer.java,G2TextMeasurer,63,45,0.71428573,10,0.071428575
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\TextAnchor.java,TextAnchor,145,94,0.64827585,350,0.0018522167
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\TextBlock.java,TextBlock,272,135,0.49632353,3615,1.3729557E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\text\TextBlockAnchor.java,TextBlockAnchor,55,43,0.7818182,39,0.020046622
@@ -436,7 +410,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\title\CompositeTitle.java,CompositeTitle,223,126,0.5650224,2306,2.4502273E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\title\DateTitle.java,DateTitle,154,117,0.75974023,319,0.002381631
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\title\ImageTitle.java,ImageTitle,330,155,0.46969697,4249,1.1054295E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\title\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\title\ShortTextTitle.java,ShortTextTitle,223,104,0.46636772,2095,2.2260989E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\title\TextTitle.java,TextTitle,800,336,0.42,37051,1.1335726E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\title\Title.java,Title,396,219,0.5530303,6153,8.987978E-5
@@ -444,7 +417,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\urls\CustomCategoryURLGenerator.java,CustomCategoryURLGenerator,179,91,0.5083799,1021,4.9792347E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\urls\CustomPieURLGenerator.java,CustomPieURLGenerator,204,109,0.53431374,1167,4.5785238E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\urls\CustomXYURLGenerator.java,CustomXYURLGenerator,193,104,0.5388601,1522,3.5404737E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\urls\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\urls\PieURLGenerator.java,PieURLGenerator,64,59,0.921875,52,0.017728366
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\urls\StandardCategoryURLGenerator.java,StandardCategoryURLGenerator,179,96,0.5363129,415,0.0012923202
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\urls\StandardPieURLGenerator.java,StandardPieURLGenerator,151,82,0.54304636,678,8.009533E-4
@@ -459,7 +431,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\util\ExportUtils.java,ExportUtils,211,99,0.46919432,1015,4.6226042E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\util\GradientPaintTransformer.java,GradientPaintTransformer,47,41,0.87234044,21,0.04154002
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\util\GradientPaintTransformType.java,GradientPaintTransformType,40,33,0.825,0,0.0
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\util\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\util\PaintAlpha.java,PaintAlpha,355,229,0.64507043,4054,1.5911949E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\util\ShadowGenerator.java,ShadowGenerator,68,61,0.89705884,33,0.027183602
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\util\StandardGradientPaintTransformer.java,StandardGradientPaintTransformer,156,77,0.49358973,869,5.679974E-4
@@ -484,7 +455,6 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\flow\FlowDatasetUtils.java,FlowDatasetUtils,194,105,0.5412371,1516,3.5701657E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\flow\FlowKey.java,FlowKey,156,93,0.59615386,871,6.844476E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\flow\NodeKey.java,NodeKey,140,86,0.6142857,453,0.0013560391
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\flow\package-info.java,null,4,3,0.75,3,0.25
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\function\Function2D.java,Function2D,54,50,0.9259259,42,0.022045854
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\function\LineFunction2D.java,LineFunction2D,121,80,0.661157,221,0.0029916607
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\function\NormalDistributionFunction2D.java,NormalDistributionFunction2D,129,82,0.6356589,309,0.0020571486
@@ -528,9 +498,7 @@ C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\j
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\json\impl\JSONObject.java,JSONObject,175,90,0.51428574,1150,4.47205E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\json\impl\JSONStreamAware.java,JSONStreamAware,46,40,0.8695652,4,0.2173913
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\json\impl\JSONValue.java,JSONValue,314,159,0.5063694,2932,1.7270444E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\json\impl\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\json\JSONUtils.java,JSONUtils,187,85,0.45454547,902,5.0393067E-4
-C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\json\package-info.java,null,4,3,0.75,0,0.0
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\KeyedObject.java,KeyedObject,135,81,0.6,627,9.5693785E-4
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\KeyedObjects.java,KeyedObjects,315,166,0.52698416,5629,9.36195E-5
 C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\data\KeyedObjects2D.java,KeyedObjects2D,462,220,0.47619048,13229,3.5995956E-5

@@ -24,18 +24,18 @@ This project was made for the class IFT3913 - software quality and metrics in wi
 
 # How to use
 Run in the terminal
-``` 
-# if specifing the path in arguments
-$ java -jar codecheck.jar [path_to_repository]
-# if specifing the path in the config.properties
-$ java -jar codecheck.jar 
 
+If specifing the path in arguments
+``` console
+$ java -jar codecheck.jar [path_to_repository]
+```
+if specifing the path in the config.properties
+```console 
+$ java -jar codecheck.jar
 ```
 
 ## Hypothesis
 - The java repository used is correctly formated and has passed through a first linting. 
-- package-info.java are not considered as valid file
+- package-info.java and module-info.java are not considered as valid file
+- Enums are not considered in the as less well for  the less commented classes.
 
-## Bug
-
-- package-info.java are still showing as null class

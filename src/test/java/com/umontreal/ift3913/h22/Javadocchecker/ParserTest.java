@@ -3,7 +3,6 @@ package com.umontreal.ift3913.h22.Javadocchecker;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.junit.Test;
