@@ -10,15 +10,19 @@ import java.util.regex.Pattern;
 /**
  * Have all informations of the selected class
  * Basic informations are:
- * - pathToFile: The asbolute path to the class
- * - packageName: The name packageName
- * - className: The name of the class
+ * <ul>
+ * <li>pathToFile: The asbolute path to the class
+ * <li>packageName: The name packageName
+ * <li>className: The name of the class
+ * </ul>
  * The metrics are:
- * - LOC: Line of code in the class
- * - CLOC: Line of comments in the class
- * - WMC: Weighted Methods per Class
- * - DC: Density of code in report to comment lines
- * - BC: DC / WMC
+ * <ul>
+ * <li>LOC: Line of code in the class
+ * <li>CLOC: Line of comments in the class
+ * <li>WMC: Weighted Methods per Class
+ * <li>DC: Density of code in report to comment lines
+ * <li>BC: Degree of the class being commented well
+ * </ul>
  */
 public class ClassInfo {
     private Path pathToFile;
@@ -32,15 +36,22 @@ public class ClassInfo {
     private int methodCount = 0;
 
     /**
-     * Constructor to each class
+     * Class constructor specifying the path of the class.
      * 
-     * @param PathToFile is the absolute path the file
+     * @param PathToFile the absolute path of the file.
      */
     public ClassInfo(Path PathToFile) {
         pathToFile = PathToFile;
         readByLine(pathToFile);
     }
 
+    /**
+     * Reads line by line the file of given path and execute a set of actions.
+     * 
+     * @param p the absolute path of the class to be read.
+     * 
+     * @see #actionForEachLine(String)
+     */
     private void readByLine(Path p) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(p.toString()));
@@ -52,6 +63,21 @@ public class ClassInfo {
         }
     }
 
+    /**
+     * Updates the Object ClassInfo about the given class'
+     * <ul>
+     * <li>Class name
+     * <li>Package name
+     * <li>Lines of code
+     * <li>Lines of comments
+     * <li>Number of methods
+     * <li>Number of predicates
+     * </ul>
+     * 
+     * @param line the given line to be read
+     * 
+     * @see #readByLine(Path)
+     */
     private void actionForEachLine(String line) {
         extractClassName(line);
         extractPackageName(line);
@@ -63,6 +89,11 @@ public class ClassInfo {
         BC = getBC();
     }
 
+    /**
+     * Extracts the class' name from lines of code.
+     * 
+     * @param line the line of code to be read.
+     */
     private void extractClassName(String line) {
         String res = Helper.getIdentenfier(line, "public.* class|public.*interface|public.*enum");
         if (res != "") {
@@ -70,6 +101,11 @@ public class ClassInfo {
         }
     }
 
+    /**
+     * Extracts the package's name from lines of code.
+     * 
+     * @param line the line of code to be read.
+     */
     private void extractPackageName(String line) {
         String res = Helper.getIdentenfier(line, "package");
         if (res != "") {
@@ -77,30 +113,73 @@ public class ClassInfo {
         }
     }
 
+    /**
+     * Returns a <code>Path</code> object of the current file being read
+     * by the parser.
+     * 
+     * @return the <code>Path</code>.
+     */
     public Path getPathToFile() {
         return pathToFile;
     }
 
+    /**
+     * Returns the package name of the current file being read
+     * by the parser.
+     * 
+     * @return the package name.
+     */
     public String getPackageName() {
         return packageName;
     }
 
+    /**
+     * Returns the class name of the current file being read
+     * by the parser.
+     * 
+     * @return the class name.
+     */
     public String getClassName() {
         return className;
     }
 
+    /**
+     * Returns the number of lines of code of the current file being read
+     * by the parser.
+     * 
+     * @return the number of lines of code.
+     */
     public int getClassLOC() {
         return LOC;
     }
 
+    /**
+     * Returns the number of commented lines of code of the current file
+     * being read by the parser.
+     * 
+     * @return the number of commented lines of code.
+     */
     public int getClassCLOC() {
         return CLOC;
     }
 
+    /**
+     * Returns the weighted methods of the current class being read
+     * by the parser. The weighted methods is the weighted sum of 
+     * McCabe's cyclomatic complexity of all methods of given class.
+     * 
+     * @return the weighted methods.
+     */
     public int getClassWMC() {
         return WMC;
     }
 
+    /**
+     * Returns the density of code in report to the comment lines of
+     * the current class being read by the parser.
+     * 
+     * @return the comment density.
+     */
     private float getDC() {
         if (LOC == 0) {
             return 0;
