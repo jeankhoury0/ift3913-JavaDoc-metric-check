@@ -4,22 +4,19 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- * ClassCSVGenerator
- * Generate the CSV for the class
- */
-public class ClassCSVGenerator {
+public class ClassCsvFactory {
+
     private final String fileName = "classes.csv";
     private FileWriter pw;
 
-    public ClassCSVGenerator() {
+    public ClassCsvFactory() {
         try {
             File f = new File(fileName);
             f.delete();
             pw = new FileWriter(f, true);
             writeHeader();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();        
         }
     }
 
@@ -47,4 +44,5 @@ public class ClassCSVGenerator {
         }
         return;
     }
+    
 }

@@ -183,17 +183,15 @@ public class ClassInfo {
     private float getDC() {
         if (LOC == 0) {
             return 0;
-        } else {
-            return (float) CLOC / (float) LOC;
         }
+        return (float) CLOC / (float) LOC;
     }
 
     private float getBC() {
         if (WMC == 0) {
             return 0;
-        } else {
-            return getDC() / (float) WMC;
         }
+        return getDC() / (float) WMC;  
     }
 
     private void increaseLOC() {
