@@ -95,8 +95,8 @@ public class ClassInfo {
      * @param line the line of code to be read.
      */
     private void extractClassName(String line) {
-        String res = Helper.getIdentenfier(line, "public.* class|public.*interface|public.*enum");
-        if (res != "") {
+        String res = Helper.getIdentenfier(line, "public.* class|class|public.*interface|public.*enum");
+        if ((className == null) && (res != "") && (!Helper.isACommentary(line))){
             this.className = res;
         }
     }
@@ -108,7 +108,7 @@ public class ClassInfo {
      */
     private void extractPackageName(String line) {
         String res = Helper.getIdentenfier(line, "package");
-        if (res != "") {
+        if ((packageName == null) && (res != "") && (!Helper.isACommentary(line))) {
             this.packageName = res;
         }
     }
@@ -278,6 +278,7 @@ public class ClassInfo {
     /**
      * Returns the string representation of a <code>ClassInfo</code> object.
      *
+     * @return a string reprensentation of <code>ClassInfo</code>.
      */
     @Override
     public String toString() {
@@ -286,6 +287,12 @@ public class ClassInfo {
                 + ", pathToFile=" + pathToFile + "]";
     }
 
+    /**
+     * Returns the string representation of a <code>ClassInfo</code> object
+     * formatted for CSV use.
+     *
+     * @return a string reprensentation of <code>ClassInfo</code>.
+     */
     public String toCSV() {
         return (pathToFile + "," +
                 className + "," +

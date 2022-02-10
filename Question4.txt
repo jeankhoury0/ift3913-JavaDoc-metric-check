@@ -1,0 +1,23 @@
+==== Less well commented package
+org.jfree.chart.plot
+org.jfree.chart.axis
+org.jfree.chart.renderer.xy
+
+C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot	org.jfree.chart.plot	31404	14239	0.45341358	3355322	1.35E-07
+C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\axis	org.jfree.chart.axis	22695	10402	0.45833883	799841	5.73E-07
+C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\xy	org.jfree.chart.renderer.xy	23113	10596	0.4584433	745219	6.15E-07
+
+=== Less well commented classes
+XYPlot
+CategoryPlot
+AbstractRenderer
+
+C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\XYPlot.java	XYPlot	4981	2312	0.4641638	1406230	3.30E-07
+C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\plot\CategoryPlot.java	CategoryPlot	4523	2162	0.47800133	1114194	4.29E-07
+C:\Users\jeank\Downloads\jfreechart-master\jfreechart-master\src\main\java\org\jfree\chart\renderer\AbstractRenderer.java	AbstractRenderer	2774	1575	0.56777215	569843	9.96E-07
+
+
+How to fix
+
+Pas grand chose a part mieux commenter le code ou bien rendre les methodes moins complexe 
+(en baissant la complexité cyclomatique de McDonald). 

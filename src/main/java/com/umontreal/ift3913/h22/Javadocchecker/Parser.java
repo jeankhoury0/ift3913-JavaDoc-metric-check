@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.HashMap;
-import java.util.regex.PatternSyntaxException;
 
 import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.ClassCsvFactory;
 import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.PackageCsvFactory;
