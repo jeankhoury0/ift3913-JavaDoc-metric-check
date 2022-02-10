@@ -9,8 +9,13 @@ import org.junit.Test;
 public class HelperTest {
     @Test
     public void testGetIdentenfier() {
-        assertEquals("", Helper.getIdentenfier("a line", "    private transient EventListenerList"));
-        assertEquals("AbstractAnnotation", Helper.getIdentenfier("public abstract class AbstractAnnotation implements", "class"));
+        String REGEX = "public.* class|class|public.*interface|public.*enum";
+        assertEquals("", Helper.getIdentenfier("a line", REGEX));
+        assertEquals("AbstractAnnotation", Helper.getIdentenfier("public abstract class AbstractAnnotation implements", 
+                REGEX));
+        assertEquals("DefaultPlotEditor",
+                Helper.getIdentenfier("class DefaultPlotEditor extends JPanel implements ActionListener {", REGEX));
+
     }
 
     @Test
