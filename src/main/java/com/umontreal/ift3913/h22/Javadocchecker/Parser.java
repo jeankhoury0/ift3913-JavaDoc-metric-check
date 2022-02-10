@@ -6,8 +6,8 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.HashMap;
 import java.util.regex.PatternSyntaxException;
 
-import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.ClassCSVGenerator;
-import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.PackageCSVGenerator;
+import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.ClassCsvFactory;
+import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.PackageCsvFactory;
 
 /**
  * Parser
@@ -17,7 +17,7 @@ import com.umontreal.ift3913.h22.Javadocchecker.csvGenerator.PackageCSVGenerator
 public class Parser {
 
     private static HashMap<String, PackageInfo> packageMap = new HashMap<String, PackageInfo>();
-    final static ClassCSVGenerator classCSV = new ClassCSVGenerator();
+    final static ClassCsvFactory classCSV = new ClassCsvFactory();
 
     /**
      * Get all files recursively from the path specified
@@ -39,7 +39,7 @@ public class Parser {
         try {
             Files.walkFileTree(p, fv);
             // * Parse CSV
-            PackageCSVGenerator packageCSV = new PackageCSVGenerator();
+            PackageCsvFactory packageCSV = new PackageCsvFactory();
             packageCSV.parseMapToCSV(packageMap);
 
         } catch (IOException e) {

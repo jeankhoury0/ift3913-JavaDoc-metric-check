@@ -4,19 +4,18 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
 import com.umontreal.ift3913.h22.Javadocchecker.PackageInfo;
 
 /**
- * PackageCSVGenerator
+ * PackageCsvFactory
  * Generate the CSV for the package
  */
-public class PackageCSVGenerator {
+public class PackageCsvFactory {
     private final String fileName = "paquets.csv";
     private FileWriter pw;
 
-    public PackageCSVGenerator() {
+    public PackageCsvFactory(){
         try {
             File f = new File(fileName);
             f.delete();
@@ -46,7 +45,7 @@ public class PackageCSVGenerator {
     }
 
     public void parseMapToCSV(HashMap<String, PackageInfo> hm) {
-        for (Map.Entry<String, PackageInfo> entry : hm.entrySet()) {
+        for (HashMap.Entry<String, PackageInfo> entry : hm.entrySet()) {
             PackageInfo pi = entry.getValue();
             appendLine(pi.toCSV());
         }
@@ -62,4 +61,5 @@ public class PackageCSVGenerator {
         }
     }
 
+    
 }

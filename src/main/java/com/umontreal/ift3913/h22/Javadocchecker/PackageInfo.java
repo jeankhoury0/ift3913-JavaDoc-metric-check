@@ -39,17 +39,15 @@ public class PackageInfo {
     public float getDC() {
         if (LOC == 0) {
             return 0;
-        } else {
-            return (float) CLOC / (float) LOC;
         }
+        return (float) CLOC / (float) LOC;
     }
 
     public float getBC() {
         if (WCP == 0) {
             return 0;
-        } else {
-            return getDC() / (float) WCP;
         }
+        return getDC() / (float) WCP;
     }
 
     public String getPackageName() {
