@@ -50,7 +50,7 @@ public class ClassInfo {
      * 
      * @param p the absolute path of the class to be read.
      * 
-     * @see #actionForEachLine(String)
+     * @see actionForEachLine(String)
      */
     private void readByLine(Path p) {
         try {
@@ -76,7 +76,7 @@ public class ClassInfo {
      * 
      * @param line the given line to be read
      * 
-     * @see #readByLine(Path)
+     * @see readByLine(Path)
      */
     private void actionForEachLine(String line) {
         extractClassName(line);
@@ -117,7 +117,7 @@ public class ClassInfo {
      * Returns a <code>Path</code> object of the current file being read
      * by the parser.
      * 
-     * @return the <code>Path</code>.
+     * @return the Path
      */
     public Path getPathToFile() {
         return pathToFile;
@@ -187,6 +187,11 @@ public class ClassInfo {
         return (float) CLOC / (float) LOC;
     }
 
+    /**
+     * Returns the degree of the class being well commented.
+     * 
+     * @return the degree.
+     */
     private float getBC() {
         if (WMC == 0) {
             return 0;
@@ -194,22 +199,44 @@ public class ClassInfo {
         return getDC() / (float) WMC;  
     }
 
+    /**
+     * Increments the counter of lines of code of current class.
+     */
     private void increaseLOC() {
         this.LOC += 1;
     }
 
+    /**
+     * Increments the counter of commented lines of code of current class.
+     */
     private void increaseCLOC() {
         this.CLOC += 1;
     }
 
+    /**
+     * Increments by a set amount the counter of methods of current class.
+     *
+     * @param number the amount to add to the counter of methods.
+     */
     private void increaseMethodCount(int number) {
         this.methodCount += number;
     }
 
+    /**
+     * Increments by a set amount the counter of weighted methods of current
+     * class.
+     *
+     * @param number the amount to add to the counter of weighted methods.
+     */
     private void increaseWMC(int number) {
         this.WMC += number;
     }
 
+    /**
+     * Adds the number of predicates inline to the WMC counter.
+     *
+     * @param line the line to be parsed for predicates.
+     */
     private void predicateIncrease(String line) {
         if (Helper.isAValidLine(line)) {
             if (!Helper.isACommentary(line)) {
@@ -221,6 +248,11 @@ public class ClassInfo {
         }
     }
 
+    /**
+     * Updates the metrics of the appropriate counter with a given line.
+     *
+     * @param line the line to be parsed for LOC or CLOC.
+     */
     private void metricIncrease(String line) {
         if (Helper.isAValidLine(line)) {
             if (Helper.isACommentary(line)) {
@@ -231,6 +263,11 @@ public class ClassInfo {
 
     }
 
+    /**
+     * Adds the number of methods inline to the method counter.
+     *
+     * @param line the line to be parsed for methods.
+     */
     private void methodIncrease(String line) {
         String REGEX = "(\\w+)(\\s+)([a-z]\\w*)(\\s*)(\\()";
         Pattern stringPattern = Pattern.compile(REGEX);
@@ -238,15 +275,15 @@ public class ClassInfo {
         increaseMethodCount((int) m.results().count());
     }
 
-    private void showOutput() {
-        System.out.println("===");
-        System.out.println("Path: " + pathToFile);
-        System.out.println("Package: " + packageName);
-        System.out.println("Class: " + className);
-        System.out.println("LOC: " + LOC);
-        System.out.println("CLOC: " + CLOC);
-        System.out.println("DC: " + DC);
-        System.out.println("=== \n\n");
+    /**
+     * Returns the string representation of a <code>ClassInfo</code> object.
+     *
+     */
+    @Override
+    public String toString() {
+        return "ClassInfo [BC=" + BC + ", CLOC=" + CLOC + ", DC=" + DC + ", LOC=" + LOC + ", WMC=" + WMC
+                + ", className=" + className + ", methodCount=" + methodCount + ", packageName=" + packageName
+                + ", pathToFile=" + pathToFile + "]";
     }
 
     public String toCSV() {

@@ -66,14 +66,14 @@ public class Parser {
         }
     }
 
-    private static Boolean isAValidFile(Path p) {
+    protected static Boolean isAValidFile(Path p) {
         try {
             String LANGUAGE_EXTENSION = Helper.readConfig("LANGUAGE_EXTENSION").toLowerCase();
             String actualFileExtension = p.toFile().toString().split("\\.")[1].toLowerCase();
             if (LANGUAGE_EXTENSION.matches(actualFileExtension)) {
                 return true;
             }
-        } catch (PatternSyntaxException e) {
+        } catch (Exception e) {
             // catch a file that has no file extension
             return false;
         }
