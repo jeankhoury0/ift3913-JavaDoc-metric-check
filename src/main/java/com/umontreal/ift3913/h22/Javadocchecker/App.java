@@ -1,7 +1,8 @@
 package com.umontreal.ift3913.h22.Javadocchecker;
 
 /**
- * App
+ * A base class for running the application.
+ * 
  * Usage:
  * * $ codecheck.jar PATH_TO_REPOSITORY_TO_CHECK
  * If not argument is definied it will use the path PATH_TO_REPOSITORY in
@@ -23,8 +24,12 @@ public class App {
         Parser.getAllFilesFromPath(PATH_TO_REPOSITORY);
     }
 
+    /** For path to repository. */
     private static String PATH_TO_REPOSITORY;
 
+    /**
+     * Assigns the path to repository from a config file.
+     */
     private static void readPathFromConfig() {
         try {
             PATH_TO_REPOSITORY = Helper.readConfig("PATH_TO_REPOSITORY");
@@ -36,8 +41,13 @@ public class App {
 
     }
 
+    /**
+     * Reads path from array of strings. First argument should
+     * be the path.
+     * 
+     * @param args Array of string of arguments.
+     */
     private static void readPathFromArg0(String[] args) {
-
         PATH_TO_REPOSITORY = args[0];
         System.out.println(Helper.ANSI_YELLOW + "Using the path in arg[0]  " + Helper.ANSI_RESET + PATH_TO_REPOSITORY);
     }

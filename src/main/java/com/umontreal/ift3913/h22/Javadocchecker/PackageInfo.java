@@ -25,6 +25,12 @@ public class PackageInfo {
     private float BC;
     private float DC;
 
+    /**
+     * Updates the package info by adding to it the given
+     * <code>ClassInfo</code> object.
+     * 
+     * @param ci the <code>ClassInfo</code>.
+     */
     public void add(ClassInfo ci) {
         if (packageName == null) {
             packageName = ci.getPackageName();
@@ -36,6 +42,11 @@ public class PackageInfo {
         WCP += ci.getClassWMC();
     }
 
+    /**
+     * Gets the comment density of this package.
+     * 
+     * @return the comment density of this package.
+     */
     public float getDC() {
         if (LOC == 0) {
             return 0;
@@ -43,6 +54,11 @@ public class PackageInfo {
         return (float) CLOC / (float) LOC;
     }
 
+    /**
+     * Gets the degree this package is well commented.
+     * 
+     * @return the degree this package is well commented.
+     */
     public float getBC() {
         if (WCP == 0) {
             return 0;
@@ -50,12 +66,19 @@ public class PackageInfo {
         return getDC() / (float) WCP;
     }
 
+    /**
+     * Gets this package's name.
+     * 
+     * @return this package's name.
+     */
     public String getPackageName() {
         return packageName;
     }
 
     /**
-     * Generate a line of comma separeted value for the csv parsing
+     * Generate a line of comma separated value for the csv parsing
+     * 
+     * @return the <code>PackageInfo</code> reprensentation formatted for CSV.
      */
     public String toCSV() {
         DC = getDC();

@@ -15,6 +15,10 @@ public class PackageCsvFactory {
     private final String fileName = "paquets.csv";
     private FileWriter pw;
 
+    /**
+     * Writes the paquets.csv file in current directory. Will overwrite
+     * file if it already exists.
+     */
     public PackageCsvFactory(){
         try {
             File f = new File(fileName);
@@ -27,6 +31,9 @@ public class PackageCsvFactory {
         }
     }
 
+    /**
+     * Closes the file writer after it has finished its job.
+     */
     public void closePW() {
         try {
             pw.close();
@@ -35,6 +42,11 @@ public class PackageCsvFactory {
         }
     }
 
+    /**
+     * Appends the <code>PackageInfo</code> information into the document.
+     * 
+     * @param CSVline the line to be inserted into the document.
+     */
     public void appendLine(String CSVline) {
         try {
             pw.append(CSVline);
@@ -44,6 +56,12 @@ public class PackageCsvFactory {
         return;
     }
 
+    /**
+     * Parses every class in a package to gather information and inserts
+     * it to the document.
+     * 
+     * @param hm the hashmap linking every class to its package parent.
+     */
     public void parseMapToCSV(HashMap<String, PackageInfo> hm) {
         for (HashMap.Entry<String, PackageInfo> entry : hm.entrySet()) {
             PackageInfo pi = entry.getValue();
@@ -53,6 +71,9 @@ public class PackageCsvFactory {
 
     }
 
+    /**
+     * Writes the first row of the document, being the header.
+     */
     private void writeHeader() {
         try {
             pw.append("chemin, paquet, paquet_LOC, paquet_CLOC, paquet_DC, WCP, paquet_BC\n");

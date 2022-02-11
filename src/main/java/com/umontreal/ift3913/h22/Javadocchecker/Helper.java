@@ -7,6 +7,9 @@ import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * A class to help the parsing of files.
+ */
 public class Helper {
 
     /**
@@ -61,7 +64,7 @@ public class Helper {
     /**
      * Check if the line passed is a commentary
      * 
-     * @param lineis the line that might contain a commentary
+     * @param line is the line that might contain a commentary
      * @return true if the line is a commentary
      */
     public static boolean isACommentary(String line) {
@@ -71,8 +74,10 @@ public class Helper {
         return m.find();
     }
 
-    // for the console output
+    /** For the console output */
     public static final String ANSI_RESET = "\u001B[0m";
+
+    /** For the console output */
     public static final String ANSI_YELLOW = "\u001B[33m";
 
 }
