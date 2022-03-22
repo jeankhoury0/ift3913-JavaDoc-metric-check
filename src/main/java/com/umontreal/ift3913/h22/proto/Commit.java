@@ -5,6 +5,11 @@ package com.umontreal.ift3913.h22.proto;
  */
 public class Commit {
     String commitID;
-    String classCount; 
+    int classCount; 
 
+
+    @Override
+    public String toString() {
+        return commitID + " " + classCount;
+    }
 }

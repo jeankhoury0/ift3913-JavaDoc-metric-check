@@ -31,23 +31,33 @@ public class CommitIterator {
         for (String commitId:commitIdList){
             Commit commit = new Commit();
             commit.commitID = commitId;
-            int classCount = 0;
-            System.out.println(Helper.ANSI_YELLOW + "Commit id: " + commitId + Helper.ANSI_RESET);
+            
            
             try {
                 changeCommitInFolder.change(commitId);
                 Parser.getAllFilesFromPath(new File("./tmp/").toString());
-                walkFilePath("./tmp/");
+                int numberOfClass = walkFilePath("./tmp/");
+                commit.classCount = numberOfClass;
+                commitData.add(commit);
+                System.out.println(Helper.ANSI_YELLOW + "Commit id: " + commitId + Helper.ANSI_RESET + "  - NC: " + commit.classCount);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }            
+            }
 
         }
+
+        commitData.toString();
     }
 
-    private void walkFilePath(String p){
+    /**
+     * 
+     * @param p
+     * @return the class count
+     */
+    private int walkFilePath(String p){
         // String fileExtension = "."+ Helper.readConfig("LANGUAGE_EXTENSION").toLowerCase();
-        // System.out.println(fileExtension);
+        // System.out.println(fileExtension)
+        int classCount = 0;
         try (Stream<Path> walk = Files.walk(Paths.get(p))) {
             // We want to find only regular files
             List<Object> result = walk.filter(Files::isRegularFile)
@@ -55,13 +65,14 @@ public class CommitIterator {
                                         .map(x -> x.toString()).collect(Collectors.toList());
 
             for(Object path:result){
-                classCount++;
+                classCount += 1;
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(classCount);
+        return classCount;
 
     }
+    
     
 }

@@ -28,8 +28,8 @@ public class gitIdentifierList {
     private void getAllIndentifier(){
         //TODO remove the folder at the beguining of exec "rmdir -rf *"
         
-        processBuilder.command("bash", "-c", "cd tmp; echo getting clone of " + "; git clone " + gitUrl.getURL()
-                + "; cd *; git rev-list master");
+        processBuilder.command("bash", "-c", "cd tmp; rm -rf * .; echo getting clone of " + "; git clone " + gitUrl.getURL()
+                + "; cd *; git rev-list HEAD;");
         processBuilder.directory(new File("./"));
 
         try {
@@ -48,7 +48,7 @@ public class gitIdentifierList {
                 System.out.println("Bash was executed perfectly!");
                 process.destroy();
             } else {
-                System.out.println("d");
+                System.out.println("ERROR");
                 // abnormal...
             }
 
