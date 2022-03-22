@@ -10,3 +10,5 @@ PATH_TO_REPOSITORY=<Absolute path to dir>
 COMMENT_TYPES=[//, /* */, /** */]
 COMMENT_REGEX=((\s*//s*)|((^\s*)(/[*]*))|([*]/)|([*]))
 LANGUAGE_EXTENSION=java
+
+DEFAULT_URL_TO_GIT_REPO=https://github.com/jfree/jfreechart
