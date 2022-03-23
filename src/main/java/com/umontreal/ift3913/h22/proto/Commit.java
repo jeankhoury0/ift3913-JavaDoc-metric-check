@@ -21,8 +21,8 @@ public class Commit {
 
     public void runAnalysis(){
         ProcessBuilder pb = new ProcessBuilder();
-        pb.command("powershell", "-c", "java -jar codecheck.jar .tmp;");
-        pb.directory(new File("./"));
+        pb.command("powershell", "-c", "java -jar codecheck.jar tmp;");
+        pb.directory(new File("."));
         
         try {
             Process process = pb.start();
