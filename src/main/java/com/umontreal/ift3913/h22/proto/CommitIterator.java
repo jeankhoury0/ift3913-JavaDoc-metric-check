@@ -22,9 +22,7 @@ import com.umontreal.ift3913.h22.proto.helpers.changeCommitInFolder;
 public class CommitIterator {
 
     public ArrayList <Commit> commitData = new ArrayList<>();
-    public CommitIterator(){
 
-    }
 
     public void iterateToAllCommits(ArrayList<String> commitIdList){
         
@@ -40,6 +38,7 @@ public class CommitIterator {
                 commit.classCount = numberOfClass;
                 commitData.add(commit);
                 System.out.println(Helper.ANSI_YELLOW + "Commit id: " + commitId + Helper.ANSI_RESET + "  - NC: " + commit.classCount);
+                commit.runAnalysis();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
