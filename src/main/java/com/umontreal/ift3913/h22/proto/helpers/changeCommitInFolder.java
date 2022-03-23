@@ -12,7 +12,7 @@ public class changeCommitInFolder{
     
     public static void change(String commitHex) throws InterruptedException{
         ProcessBuilder processBuilder = new ProcessBuilder();
-        processBuilder.command("bash", "-c", "cd tmp; cd *; ls; git reset --hard " + commitHex +";" ); 
+        processBuilder.command("powershell", "-c", "cd tmp; cd *; ls; git reset --hard " + commitHex +";" ); 
         processBuilder.directory(new File("./"));
 
         try{

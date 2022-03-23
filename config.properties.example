@@ -1,14 +1,14 @@
 # Configuration file for the TP
 
-#Please modify the config.properties with the path you want
-
 # PATH_TO_REPOSITORY: is the path to the folder 
 # we want to check complexity for
 
-PATH_TO_REPOSITORY=<Absolute path to dir>
+#JavaDocChecker
+PATH_TO_REPOSITORY=C:/Users/jeank/Downloads/jfreechart-master/
 
 COMMENT_TYPES=[//, /* */, /** */]
 COMMENT_REGEX=((\s*//s*)|((^\s*)(/[*]*))|([*]/)|([*]))
 LANGUAGE_EXTENSION=java
 
-DEFAULT_URL_TO_GIT_REPO=https://github.com/jfree/jfreechart
+# PROTO 
+DEFAULT_URL_TO_GIT_REPO=https://github.com/MathProuv/IFT1025-TP3

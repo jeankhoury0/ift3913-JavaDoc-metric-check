@@ -28,7 +28,7 @@ public class gitIdentifierList {
     private void getAllIndentifier(){
         //TODO remove the folder at the beguining of exec "rmdir -rf *"
         
-        processBuilder.command("bash", "-c", "cd tmp; rm -rf * .; echo getting clone of " + "; git clone " + gitUrl.getURL()
+        processBuilder.command("powershell", "-c", "cd tmp; rm -rf * .; echo getting clone of " + "; git clone " + gitUrl.getURL()
                 + "; cd *; git rev-list HEAD;");
         processBuilder.directory(new File("./"));
 
@@ -45,7 +45,7 @@ public class gitIdentifierList {
 
             int exitVal = process.waitFor();
             if (exitVal == 0) {
-                System.out.println("Bash was executed perfectly!");
+                System.out.println("powershell was executed perfectly!");
                 process.destroy();
             } else {
                 System.out.println("ERROR");

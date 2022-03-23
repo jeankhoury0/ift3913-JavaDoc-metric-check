@@ -37,7 +37,7 @@ public class Commit {
 
             int exitVal = process.waitFor();
             if (exitVal == 0) {
-                System.out.println("Bash was executed perfectly!");
+                System.out.println("powershell was executed perfectly!");
                 process.destroy();
             } else {
                 System.out.println("d");
