@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22.proto.helpers;
+package com.umontreal.ift3913.h22.Proto.helpers;
 
 import java.io.BufferedReader;
 import java.io.File;

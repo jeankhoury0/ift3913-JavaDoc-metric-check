@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22.proto.helpers;
+package com.umontreal.ift3913.h22.Proto.helpers;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,9 +13,9 @@ public class gitIdentifierList {
     ProcessBuilder processBuilder = new ProcessBuilder();
 
     private ArrayList<String> identifierList = new ArrayList<String>();
-    private gitURL gitUrl;
+    private GitURL gitUrl;
     
-    public gitIdentifierList(gitURL repoURL){
+    public gitIdentifierList(GitURL repoURL){
         this.gitUrl = repoURL; 
         getAllIndentifier();
     }
@@ -28,7 +28,7 @@ public class gitIdentifierList {
     private void getAllIndentifier(){
         //TODO remove the folder at the beguining of exec "rmdir -rf *"
         
-        processBuilder.command("powershell", "-c", "cd tmp; rm -rf * .; echo getting clone of " + "; git clone " + gitUrl.getURL()
+        processBuilder.command("bash", "-c", "cd tmp; rm -rf * .; echo getting clone of " + "; git clone " + gitUrl.getURL()
                 + "; cd *; git rev-list HEAD;");
         processBuilder.directory(new File("./"));
 

@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22.proto.helpers;
+package com.umontreal.ift3913.h22.Proto.helpers;
 
 import com.umontreal.ift3913.h22.Javadocchecker.Helper;
 
@@ -7,10 +7,10 @@ import com.umontreal.ift3913.h22.Javadocchecker.Helper;
  * - config.properties files
  * - input
  */
-public class gitURL {
+public class GitURL {
     private String url;
 
-    public gitURL(String[] args){
+    public GitURL(String[] args){
         if (args.length == 1){
             url = readGithubURLFromArg0(args);
             return;

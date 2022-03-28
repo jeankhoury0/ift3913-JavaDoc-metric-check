@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22.proto;
+package com.umontreal.ift3913.h22.Proto;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -37,7 +37,7 @@ public class Commit {
 
             int exitVal = process.waitFor();
             if (exitVal == 0) {
-                System.out.println("powershell was executed perfectly!");
+                // System.out.println("powershell was executed perfectly!");
                 process.destroy();
             } else {
                 System.out.println("d");
