@@ -1,9 +1,7 @@
 package com.umontreal.ift3913.h22.Proto.helpers;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  * change git version to a specific commit
