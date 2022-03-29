@@ -11,6 +11,8 @@ import java.io.InputStreamReader;
 public class Commit {
     String commitID;
     int classCount; 
+    int mWMC;
+    double mcBC;
 
 
     @Override
