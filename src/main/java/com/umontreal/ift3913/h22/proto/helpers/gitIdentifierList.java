@@ -28,7 +28,7 @@ public class gitIdentifierList {
     private void getAllIndentifier(){
         //TODO remove the folder at the beguining of exec "rmdir -rf *"
         
-        processBuilder.command("bash", "-c", "cd tmp; rm -rf * .; echo getting clone of " + "; git clone " + gitUrl.getURL()
+        processBuilder.command("bash", "-c", "cd tmp; rm -rf * .; git clone " + gitUrl.getURL()
                 + "; cd *; git rev-list HEAD;");
         processBuilder.directory(new File("./"));
 
