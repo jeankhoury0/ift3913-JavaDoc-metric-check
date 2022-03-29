@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.umontreal.ift3913.h22.Proto.helpers.CSVReader;
+
 /**
  * All the info on a commit
  */
@@ -51,5 +53,21 @@ public class Commit {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        getMetrics();
+    }
+
+    private void getMetrics(){
+        CSVReader csvReader = new CSVReader("classes.csv");
+        csvReader.read();
+        try {
+            mcBC = csvReader.getTotalMcBC()/classCount;
+            mWMC = csvReader.getTotalWMC()/classCount;
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+    }
+
+    public String CSVLineBuilder(){
+        return(commitID + "," + classCount + "," + mWMC + "," + mcBC + "\n" );
     }
 }

@@ -78,7 +78,7 @@ public class CommitIterator {
     }
 
     private void appendToProtoCSV(Commit commit){
-        csvFactory.appendLine(commit.commitID + ";" + commit.classCount + "\n");
+        csvFactory.appendLine(commit.CSVLineBuilder());
     }
     
     
