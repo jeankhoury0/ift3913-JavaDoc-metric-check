@@ -23,8 +23,6 @@ public class CSVReader {
         return totalmcBC;
     }
     
-    
-
     public void read(){
             String line = "";
             String splitBy = ",";

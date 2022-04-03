@@ -12,7 +12,7 @@ package com.umontreal.ift3913.h22.Javadocchecker;
 public class App {
 
     public static void main(String[] args) {
-        System.out.println("\033[H\033[2J" + Helper.ANSI_RESET);
+        System.out.println("" + Helper.ANSI_RESET);
         try {
             readPathFromArg0(args);
         } catch (ArrayIndexOutOfBoundsException e) {

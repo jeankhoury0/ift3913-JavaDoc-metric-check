@@ -14,8 +14,7 @@ public class App {
             gitURL = new GitURL(args);
             System.out.println(gitURL.getURL());
             gitIdentifierList = new gitIdentifierList(gitURL);
-            // System.out.println(gitIdentifierList.getIdentifierList());
-
+            gitIdentifierList.restrictAnalysis(5);
             CommitIterator commitIterator = new CommitIterator();
             commitIterator.iterateToAllCommits(gitIdentifierList.getIdentifierList());
 
