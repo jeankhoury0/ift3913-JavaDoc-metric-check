@@ -1,21 +1,20 @@
-package com.umontreal.ift3913.h22.proto;
+package com.umontreal.ift3913.h22.Proto;
 
 import com.umontreal.ift3913.h22.Javadocchecker.Helper;
-import com.umontreal.ift3913.h22.proto.helpers.gitIdentifierList;
-import com.umontreal.ift3913.h22.proto.helpers.gitURL;
+import com.umontreal.ift3913.h22.Proto.helpers.GitURL;
+import com.umontreal.ift3913.h22.Proto.helpers.gitIdentifierList;
 
 public class App {
-    static gitURL gitURL;
+    static GitURL gitURL;
     static gitIdentifierList gitIdentifierList; 
     
     public static void main(String[] args) {
         System.out.println("\033[H\033[2J" + Helper.ANSI_RESET);
         try {
-            gitURL = new gitURL(args);
+            gitURL = new GitURL(args);
             System.out.println(gitURL.getURL());
             gitIdentifierList = new gitIdentifierList(gitURL);
-            // System.out.println(gitIdentifierList.getIdentifierList());
-
+            gitIdentifierList.restrictAnalysis(5);
             CommitIterator commitIterator = new CommitIterator();
             commitIterator.iterateToAllCommits(gitIdentifierList.getIdentifierList());
 

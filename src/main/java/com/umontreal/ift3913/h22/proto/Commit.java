@@ -1,9 +1,11 @@
-package com.umontreal.ift3913.h22.proto;
+package com.umontreal.ift3913.h22.Proto;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+import com.umontreal.ift3913.h22.Proto.helpers.CSVReader;
 
 /**
  * All the info on a commit
@@ -11,6 +13,8 @@ import java.io.InputStreamReader;
 public class Commit {
     String commitID;
     int classCount; 
+    int mWMC;
+    double mcBC;
 
 
     @Override
@@ -37,7 +41,7 @@ public class Commit {
 
             int exitVal = process.waitFor();
             if (exitVal == 0) {
-                System.out.println("powershell was executed perfectly!");
+                // System.out.println("powershell was executed perfectly!");
                 process.destroy();
             } else {
                 System.out.println("d");
@@ -49,5 +53,21 @@ public class Commit {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        getMetrics();
+    }
+
+    private void getMetrics(){
+        CSVReader csvReader = new CSVReader("classes.csv");
+        csvReader.read();
+        try {
+            mcBC = csvReader.getTotalMcBC()/classCount;
+            mWMC = csvReader.getTotalWMC()/classCount;
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+    }
+
+    public String CSVLineBuilder(){
+        return(commitID + "," + classCount + "," + mWMC + "," + mcBC + "\n" );
     }
 }

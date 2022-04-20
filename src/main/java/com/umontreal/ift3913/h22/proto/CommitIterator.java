@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22.proto;
+package com.umontreal.ift3913.h22.Proto;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +12,8 @@ import java.util.stream.Stream;
 
 import com.umontreal.ift3913.h22.Javadocchecker.Helper;
 import com.umontreal.ift3913.h22.Javadocchecker.Parser;
-import com.umontreal.ift3913.h22.proto.helpers.changeCommitInFolder;
+import com.umontreal.ift3913.h22.Proto.csvGenerator.ProtoCSVFactory;
+import com.umontreal.ift3913.h22.Proto.helpers.changeCommitInFolder;
 
 /**
  * Class responsible to:
@@ -22,7 +23,7 @@ import com.umontreal.ift3913.h22.proto.helpers.changeCommitInFolder;
 public class CommitIterator {
 
     public ArrayList <Commit> commitData = new ArrayList<>();
-
+    private ProtoCSVFactory csvFactory = new ProtoCSVFactory();
 
     public void iterateToAllCommits(ArrayList<String> commitIdList){
         
@@ -39,11 +40,14 @@ public class CommitIterator {
                 commitData.add(commit);
                 System.out.println(Helper.ANSI_YELLOW + "Commit id: " + commitId + Helper.ANSI_RESET + "  - NC: " + commit.classCount);
                 commit.runAnalysis();
+                appendToProtoCSV(commit);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
         }
+
+        csvFactory.closePW();
 
         commitData.toString();
     }
@@ -71,6 +75,10 @@ public class CommitIterator {
         }
         return classCount;
 
+    }
+
+    private void appendToProtoCSV(Commit commit){
+        csvFactory.appendLine(commit.CSVLineBuilder());
     }
     
     
