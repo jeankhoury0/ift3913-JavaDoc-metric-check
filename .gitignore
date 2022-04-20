@@ -85,3 +85,8 @@ nb-configuration.xml
 
 .properties
 config.properties
+
+jfreechart/
+classes.csv
+proto.csv
+paquets.csv
