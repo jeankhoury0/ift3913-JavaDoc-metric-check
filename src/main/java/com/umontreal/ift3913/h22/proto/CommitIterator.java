@@ -22,23 +22,28 @@ import com.umontreal.ift3913.h22.proto.helpers.changeCommitInFolder;
  */
 public class CommitIterator {
 
-    public ArrayList <Commit> commitData = new ArrayList<>();
+    public ArrayList<Commit> commitData = new ArrayList<>();
     private ProtoCSVFactory csvFactory = new ProtoCSVFactory();
 
-    public void iterateToAllCommits(ArrayList<String> commitIdList){
-        
-        for (String commitId:commitIdList){
+    public void iterateToAllCommits(ArrayList<String> commitIdList) {
+
+        // counter for stat keeping
+        int commitIdSize = commitIdList.size();
+        int commitIdCounter = 0;
+
+        for (String commitId : commitIdList) {
+            commitIdCounter++;
             Commit commit = new Commit();
             commit.commitID = commitId;
-            
-           
+
             try {
                 changeCommitInFolder.change(commitId);
                 Parser.getAllFilesFromPath(new File("./tmp/").toString());
                 int numberOfClass = walkFilePath("./tmp/");
                 commit.classCount = numberOfClass;
                 commitData.add(commit);
-                System.out.println(Helper.ANSI_YELLOW + "Commit id: " + commitId + Helper.ANSI_RESET + "  - NC: " + commit.classCount);
+                System.out.println(Helper.ANSI_YELLOW + "Commit id: " + commitId + Helper.ANSI_RESET + "  -  "
+                        + commitIdCounter + "/" + commitIdSize);
                 commit.runAnalysis();
                 appendToProtoCSV(commit);
             } catch (InterruptedException e) {
@@ -57,17 +62,18 @@ public class CommitIterator {
      * @param p
      * @return the class count
      */
-    private int walkFilePath(String p){
-        // String fileExtension = "."+ Helper.readConfig("LANGUAGE_EXTENSION").toLowerCase();
+    private int walkFilePath(String p) {
+        // String fileExtension = "."+
+        // Helper.readConfig("LANGUAGE_EXTENSION").toLowerCase();
         // System.out.println(fileExtension)
         int classCount = 0;
         try (Stream<Path> walk = Files.walk(Paths.get(p))) {
             // We want to find only regular files
             List<Object> result = walk.filter(Files::isRegularFile)
-                                        .filter(a -> a.getFileName().toString().endsWith(".java"))
-                                        .map(x -> x.toString()).collect(Collectors.toList());
+                    .filter(a -> a.getFileName().toString().endsWith(".java"))
+                    .map(x -> x.toString()).collect(Collectors.toList());
 
-            for(Object path:result){
+            for (Object path : result) {
                 classCount += 1;
             }
         } catch (IOException e) {
@@ -77,9 +83,8 @@ public class CommitIterator {
 
     }
 
-    private void appendToProtoCSV(Commit commit){
+    private void appendToProtoCSV(Commit commit) {
         csvFactory.appendLine(commit.CSVLineBuilder());
     }
-    
-    
+
 }
