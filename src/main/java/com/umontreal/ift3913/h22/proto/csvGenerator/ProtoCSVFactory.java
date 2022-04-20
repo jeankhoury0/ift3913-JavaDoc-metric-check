@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22.Proto.csvGenerator;
+package com.umontreal.ift3913.h22.proto.csvGenerator;
 
 import java.io.File;
 import java.io.FileWriter;

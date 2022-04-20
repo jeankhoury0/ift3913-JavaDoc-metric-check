@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22.Proto;
+package com.umontreal.ift3913.h22.proto;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,8 +12,8 @@ import java.util.stream.Stream;
 
 import com.umontreal.ift3913.h22.Javadocchecker.Helper;
 import com.umontreal.ift3913.h22.Javadocchecker.Parser;
-import com.umontreal.ift3913.h22.Proto.csvGenerator.ProtoCSVFactory;
-import com.umontreal.ift3913.h22.Proto.helpers.changeCommitInFolder;
+import com.umontreal.ift3913.h22.proto.csvGenerator.ProtoCSVFactory;
+import com.umontreal.ift3913.h22.proto.helpers.changeCommitInFolder;
 
 /**
  * Class responsible to:

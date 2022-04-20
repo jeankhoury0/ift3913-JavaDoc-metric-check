@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22.Proto.helpers;
+package com.umontreal.ift3913.h22.proto.helpers;
 
 import java.io.File;
 import java.io.IOException;

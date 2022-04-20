@@ -1,11 +1,11 @@
-package com.umontreal.ift3913.h22.Proto;
+package com.umontreal.ift3913.h22.proto;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.umontreal.ift3913.h22.Proto.helpers.CSVReader;
+import com.umontreal.ift3913.h22.proto.helpers.CSVReader;
 
 /**
  * All the info on a commit

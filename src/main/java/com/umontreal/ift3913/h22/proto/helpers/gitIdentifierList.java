@@ -1,4 +1,4 @@
-package com.umontreal.ift3913.h22.Proto.helpers;
+package com.umontreal.ift3913.h22.proto.helpers;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,19 +6,18 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
  * Obtain all the commits id of the project
  */
-public class gitIdentifierList {
+public class GitIdentifierList {
     ProcessBuilder processBuilder = new ProcessBuilder();
 
     private ArrayList<String> identifierList = new ArrayList<String>();
-    private GitURL gitUrl;
+    private GitURLConfig gitUrl;
     
-    public gitIdentifierList(GitURL repoURL){
+    public GitIdentifierList(GitURLConfig repoURL){
         this.gitUrl = repoURL; 
         getAllIndentifier();
     }
