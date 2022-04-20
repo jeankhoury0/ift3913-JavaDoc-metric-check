@@ -80,7 +80,7 @@ public class GitIdentifierList {
         });
         System.out.println("Sample size reduced from " + identifierListsize + " to -> " + restrictiveIdentifierListSize);
 
-        identifierListsize = restrictiveIdentifierListSize;
+        identifierList = restrictiveIdentifierList;
     }
 
 }

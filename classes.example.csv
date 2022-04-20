@@ -1,0 +1,10 @@
+chemin, class, classe_LOC, classe_CLOC, classe_DC, WMC, classe_BC
+tmp\IFT1025-TP3\Bulles.java,Bulles,72,26,0.3611111,36,0.010030864
+tmp\IFT1025-TP3\Crabe.java,Crabe,33,5,0.15151516,26,0.005827506
+tmp\IFT1025-TP3\FishHunt.java,FishHunt,401,64,0.159601,3060,5.215719E-5
+tmp\IFT1025-TP3\ImageHelpers.java,ImageHelpers,80,32,0.4,136,0.0029411765
+tmp\IFT1025-TP3\Jeu.java,Jeu,249,62,0.24899599,2711,9.1846545E-5
+tmp\IFT1025-TP3\Modele.java,Modele,80,9,0.1125,384,2.9296873E-4
+tmp\IFT1025-TP3\Poisson.java,Poisson,67,17,0.25373134,93,0.0027282939
+tmp\IFT1025-TP3\Tests.java,Tests,75,0,0.0,296,0.0
+tmp\IFT1025-TP3\Étoile.java,null,23,4,0.17391305,11,0.015810277
